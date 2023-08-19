@@ -1,10 +1,11 @@
-html {
-  scroll-behavior: smooth;
-  transition: all 0.3s ease-in;
+:root {
+  --smooth: all 0.3s ease;
 }
 
 .App {
   text-align: center;
+  scroll-behavior: smooth;
+  transition: var(--smooth);
 }
 
 .App-logo {
@@ -45,4 +46,49 @@ html {
 
 .section {
   margin-top: 150px;
+}
+
+
+/* Cusstom Code */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #282c34;
+  transition: var(--smooth);
+}
+
+.nav-link:hover.nav-link::before {
+  width: 100%;
+}
+
+.btn-dark {
+  transition: var(--smooth);
+}
+
+.btn-dark:hover {
+  background: #fff;
+  color: #282c34;
+}
+
+.section {
+  margin-top: 150px;
+  transition: var(--smooth);
+}
+
+.card {
+  transition: var(--smooth);
+}
+
+.card:hover {
+  transform: rotate(1deg) translateY(3%);
+  transition: var(--smooth);
 }

@@ -9,14 +9,26 @@ const SkillSection = () => {
             " 20px 20px, rgba(136, 136, 136, 0.05) 25px 25px",
     };
 
+    const TitleSkill = {
+        "width": "100%",
+        "height": "100%",
+        "background": "#61dafb",
+        "border-radius": "50%",
+    };
+
     return (
         <section className="section">
-            <h1 className="fw-bold mb-5 display-1">My Skill</h1>
+            <h1 className="fw-bold mb-5 display-4">My Skill</h1>
             <div className="row justify-content-between align-items-center gap-3">
-                <div className="mb-5 col-xl-3 col-lg-3 col-md-12 col-sm-12 card text-center text-lg-start text-xl-start" style={cardStyle}>
+                <div
+                    className="mb-5 col-xl-3 col-lg-3 col-md-12 col-sm-12 card text-center text-lg-start text-xl-start"
+                    style={cardStyle}
+                >
                     <div className="card-body">
-                        <p className="card-title"><i className="fs-3 fa-solid fa-camera-retro"></i></p>
-                        <p className="card-text fw-bold fs-2">FRONT-END</p>
+                        <span className="card-title" style={TitleSkill}>
+                            <i className="fs-3 fa-solid fa-camera-retro"></i>
+                        </span>
+                        <p className="card-text fw-bold fs-3">FRONT-END</p>
                         <ul className="fs-4 fw-semibold">
                             <li>HTML,CSS</li>
                             <li>ReactJS</li>
@@ -25,10 +37,15 @@ const SkillSection = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="mb-5 col-xl-3 col-lg-3 col-md-12 col-sm-12 card text-center text-lg-start text-xl-start" style={cardStyle}>
+                <div
+                    className="mb-5 col-xl-3 col-lg-3 col-md-12 col-sm-12 card text-center text-lg-start text-xl-start"
+                    style={cardStyle}
+                >
                     <div className="card-body">
-                        <p className="card-title"><i className="fs-3 fa-solid fa-network-wired"></i></p>
-                        <p className="card-text fw-bold fs-2">BACK-END</p>
+                        <span className="card-title" style={TitleSkill}>
+                            <i className="fs-3 fa-solid fa-network-wired"></i>
+                        </span>
+                        <p className="card-text fw-bold fs-3">BACK-END</p>
                         <ul className="fs-4 fw-semibold">
                             <li>Spring Boot</li>
                             <li>Spring security</li>
@@ -37,10 +54,15 @@ const SkillSection = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="mb-5 col-xl-3 col-lg-3 col-md-12 col-sm-12 card text-center text-lg-start text-xl-start" style={cardStyle}>
+                <div
+                    className="mb-5 col-xl-3 col-lg-3 col-md-12 col-sm-12 card text-center text-lg-start text-xl-start"
+                    style={cardStyle}
+                >
                     <div className="card-body">
-                        <p className="card-title"><i className="fs-3 fa-brands fa-codepen"></i></p>
-                        <p className="card-text fw-bold fs-2">Other skills</p>
+                        <span className="card-title" style={TitleSkill}>
+                            <i className="fs-3 fa-brands fa-codepen"></i>
+                        </span>
+                        <p className="card-text fw-bold fs-3">Other skills</p>
                         <ul className="fs-4 fw-semibold">
                             <li>Figma</li>
                             <li>Git, GitHub</li>
@@ -52,6 +74,6 @@ const SkillSection = () => {
             </div>
         </section>
     );
-}
+};
 
 export default SkillSection;

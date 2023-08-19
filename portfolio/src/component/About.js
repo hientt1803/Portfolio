@@ -4,10 +4,10 @@ import image from "../authorImage.jpg";
 const AboutSection = () => {
     return (
         <section className="section" id="about">
-            <h1 className="display-1 text-center fw-bold mb-5">Passion Fuels Purpose!</h1>
+            <h1 className="display-4 text-center fw-bold mb-5">Passion Fuels Purpose!</h1>
             <div className="row justify-content-between align-items-center g-2">
                 <div className="col-xl-3 col-lg-3 col-sm-12 col-sm-12 text-start">
-                    <h3 className="text-secondary">BIOGRAPHY</h3>
+                    <h3 className="text-secondary text-decoration-underline">BIOGRAPHY</h3>
                     <p className="fs-5">Hi, i'm <strong>Tran Trong Hien</strong>, a <strong>Front-end Developer</strong>.
                         Now i'm in school with 6 months experience but i always learn new things
                         everyday to make myself better.
@@ -30,7 +30,7 @@ const AboutSection = () => {
                     />
                 </div>
                 <div className="col-xl-3 col-lg-3 col-sm-12 col-sm-12 text-end">
-                    <h3 className="text-secondary">EDUCATION</h3>
+                    <h3 className="text-secondary text-decoration-underline">EDUCATION</h3>
                     <p className="fs-5"><strong>FPT Polytechnic </strong> Can Tho college.</p>
                     <p className="fs-5">Average marks: <strong>8.5</strong></p>
                 </div>
