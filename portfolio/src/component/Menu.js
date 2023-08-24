@@ -18,7 +18,7 @@ const Menu = () => {
     <>
       <header
         style={{ zIndex: "999" }}
-        className="container sticky-top bg-white d-flex justify-content-between align-items-center"
+        className="bg-white d-flex justify-content-between align-items-center"
       >
         <div className="d-flex justify-content-start gap-2">
           <a href={"#"} className="navbar-brand fw-bolder">

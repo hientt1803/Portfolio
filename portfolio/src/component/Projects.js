@@ -1,7 +1,7 @@
 import { React } from "react";
 import image from "../admin.jpg";
 
-const ProjectSection = () => {
+const ProjectSection = ({ isVisible }) => {
   const cardStyle = {
     "border-radius": "7px",
     "box-shadow":
@@ -12,10 +12,56 @@ const ProjectSection = () => {
 
   return (
     <section className="section" id="projects">
-      <h5 className="text-muted text-left">SELECTED PROJECTS</h5>
-      <h1 className="fw-bolder display-3 my-3 text-left">Case studies</h1>
-
-        
+      <h5
+        className={`hidden-element ${isVisible ? "visible text-start " : ""}`}
+        style={{ color: "#9e9e9e" }}
+      >
+        WEB DEVELOPMENT & DESIGN
+      </h5>
+      <h1
+        className={`hidden-element ${
+          isVisible
+            ? "visible fw-bolder display-2 my-3 text-start delay-200"
+            : ""
+        }`}
+      >
+        Personal Projects
+      </h1>
+      <div className="projects">
+        {/* Item */}
+        <a
+          href="#home"
+          className={`hidden-element ${
+            isVisible
+              ? "visible project-item text-decoration-none delay-1000"
+              : ""
+          }`}
+          style={{ background: `url(${image})` }}
+        >
+          <div className="item-content m-5 d-flex flex-column ">
+            <span className="fs-4" style={{ color: "#9e9e9e" }}>
+              2023
+            </span>
+            <strong className="fs-1">E-Commerce Website</strong>
+          </div>
+          {/* Over lay */}
+          <div className="overlay-project">
+            <div className="item-content-overlay m-5 d-flex flex-column text-white">
+              <span className="fs-4" style={{ color: "#9e9e9e" }}>
+                2023
+              </span>
+              <strong className="fs-1 mb-2">E-Commerce Website</strong>
+              <a href="#" className="text-white delay-200">
+                view project <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </a>
+        <div
+          className="project-item"
+          style={{ background: `url(${image})` }}
+        ></div>
+      </div>
 
       {/* <div className="row justify-content-center align-items-center g-4"> */}
       {/* Item */}

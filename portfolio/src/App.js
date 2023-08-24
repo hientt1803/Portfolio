@@ -16,8 +16,9 @@ function App() {
     const handleScroll = () => {
       const element = document.querySelector(".hidden-element");
       const position = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight - 30;
 
-      if (position.top < window.innerHeight) {
+      if (position.top < windowHeight) {
         setIsVisible(true);
       }
     };
@@ -38,19 +39,22 @@ function App() {
 
   return (
     <div className="App">
-      <Menu />
+      <div className="container-fluid">
+        <Menu />
+      </div>
       <div className="container position-relative">
         <HeroSection {...{ isVisible }} />
-        <ProjectSection />
+        <ProjectSection {...{ isVisible }} />
         <SkillSection />
         <AboutSection {...{ isVisible }} />
         <ContactSection />
 
         <div className="position-fixed" style={{ bottom: "20px" }}>
           <a
-            class="d-flex justify-content-center align-items-center p-3 bg-secondary 
+            class="d-flex justify-content-center align-items-center p-3
             rounded-5 text-white text-decoration-none"
             href={"mailTo:tronghientran18@gmail.com"}
+            style={{ cursor: "pointer", background: "#c0c0c0" }}
           >
             <i class="fa-regular fa-envelope"></i>
           </a>
@@ -61,9 +65,9 @@ function App() {
           onClick={scrollToTop}
         >
           <span
-            class="d-flex justify-content-center align-items-center p-3 bg-secondary 
+            class="d-flex justify-content-center align-items-center p-3
             rounded-5 text-white text-decoration-none"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", background: "#c0c0c0" }}
           >
             <i class="fa-solid fa-arrow-up"></i>
           </span>
