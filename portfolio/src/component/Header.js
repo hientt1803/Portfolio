@@ -3,7 +3,7 @@ import { React } from "react";
 const Header = () => {
     return (
         <header className="header sticky-top bg-white">
-            <nav className="navbar navbar-expand-sm">
+            {/* <nav className="navbar navbar-expand-sm">
                 <div className="container">
                     <a className="navbar-brand fw-semibold fs-3" href={"#home"}>HienTran.DEV</a>
                     <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -46,7 +46,7 @@ const Header = () => {
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
         </header>
     );
 }
