@@ -6,11 +6,11 @@ import FooterSection from "./component/Footer";
 import Menu from "./component/Menu";
 import HeroSection from "./component/Hero";
 import ProjectSection from "./component/Projects";
-import SkillSection from "./component/Skill";
 
 function App() {
   // Show on scroll
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,43 +37,41 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+    return () => clearTimeout(timeout);
+  }, [isLoading]);
+
   return (
     <div className="App">
-      <div className="container-fluid">
-        <Menu />
-      </div>
+      <Menu />
       <div className="container position-relative">
         <HeroSection {...{ isVisible }} />
         <ProjectSection {...{ isVisible }} />
-        <SkillSection />
         <AboutSection {...{ isVisible }} />
         <ContactSection />
 
         <div className="position-fixed" style={{ bottom: "20px" }}>
           <a
-            class="d-flex justify-content-center align-items-center p-3
+            className="d-flex justify-content-center align-items-center p-3
             rounded-5 text-white text-decoration-none"
             href={"mailTo:tronghientran18@gmail.com"}
             style={{ cursor: "pointer", background: "#c0c0c0" }}
           >
-            <i class="fa-regular fa-envelope"></i>
+            <i className="fa-regular fa-envelope"></i>
           </a>
         </div>
-        <div
-          className="position-fixed"
-          style={{ bottom: "20px", right: "30px" }}
-          onClick={scrollToTop}
-        >
+        <div className="scrollTopButton" onClick={scrollToTop}>
           <span
-            class="d-flex justify-content-center align-items-center p-3
+            className="d-flex justify-content-center align-items-center p-3
             rounded-5 text-white text-decoration-none"
-            style={{ cursor: "pointer", background: "#c0c0c0" }}
           >
-            <i class="fa-solid fa-arrow-up"></i>
+            <i className="fa-solid fa-arrow-up"></i>
           </span>
         </div>
       </div>
-      <hr />
       <FooterSection />
     </div>
   );
