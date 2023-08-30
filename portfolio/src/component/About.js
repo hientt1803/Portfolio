@@ -37,7 +37,7 @@ const AboutSection = ({ isVisible }) => {
         <span className="fs-6" style={{ color: "#9e9e9e" }}>
           DEVELOPMENT - DESIGN - OTHER
         </span>
-        <p className="fs-1 fw-bolder mb-5">Personal skill</p>
+        <p className="fs-1 fw-bolder mb-5">Personal Skill</p>
         <div className="row justify-content-center">
           {/* Column  */}
           <div className="col-6 fs-5 fw-bold">
