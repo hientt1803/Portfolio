@@ -4,7 +4,7 @@ import image from "../authorImage.jpg";
 const AboutSection = ({ isVisible }) => {
   return (
     <section className="section" id="about">
-      <div style={{ padding: "100px 150px" }}>
+      <div className="about-introduce">
         <span className="fs-6" style={{ color: "#9e9e9e" }}>
           A FEW WORDS ABOUT ME
         </span>
@@ -13,7 +13,7 @@ const AboutSection = ({ isVisible }) => {
           6 months experience but i always learn new things everyday to make
           myself better.
         </p>
-        <p className="fs-6 my-5 px-5" style={{ color: "#9e9e9e" }}>
+        <p className="fs-6 my-5 px-5 px-sm-0" style={{ color: "#9e9e9e" }}>
           I'm in love design and devlopment a beautiful UI. Beside design and
           coding I'm also in love with instrument. Playing guitar, piano in
           freetime is very comfortable.

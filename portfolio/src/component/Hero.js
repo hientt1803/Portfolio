@@ -1,5 +1,4 @@
 import React from "react";
-import image from "../admin.jpg";
 import heroBaner from "../image/hero-banner.jpg";
 
 const HeroSection = ({ isVisible }) => {
@@ -44,7 +43,7 @@ const HeroSection = ({ isVisible }) => {
         </div>
         <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12">
           <img
-            src={image}
+            src={heroBaner}
             className="image-fluid"
             width={"100%"}
             height={"100%"}

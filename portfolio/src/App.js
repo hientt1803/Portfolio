@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import AboutSection from "./component/About";
 import ContactSection from "./component/Contact";
@@ -37,6 +37,7 @@ function App() {
     });
   };
 
+  // IsLoading
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
@@ -44,12 +45,17 @@ function App() {
     return () => clearTimeout(timeout);
   }, [isLoading]);
 
+
   return (
     <div className="App">
       <Menu />
       <div className="container position-relative">
         <HeroSection {...{ isVisible }} />
         <ProjectSection {...{ isVisible }} />
+        {/* <div className="hidden-element" ref={animationRef}>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, quasi
+          quia eaque ea eligendi sunt tempore aliquam fugit veritatis quae!
+        </div> */}
         <AboutSection {...{ isVisible }} />
         <ContactSection />
 

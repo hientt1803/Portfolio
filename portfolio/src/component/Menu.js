@@ -29,7 +29,7 @@ const Menu = () => {
               className="img-fluid"
             />
           </a>
-          <div className="d-flex flex-column justify-content-center align-items-start fw-bolder">
+          <div className="d-flex flex-column d-none d-md-flex justify-content-center align-items-start fw-bolder">
             <span>Tran Trong Hien</span>
             <span>WEB & UI DESIGNER</span>
           </div>
