@@ -1,24 +1,28 @@
 import { React } from "react";
 import image from "../authorImage.jpg";
 
-const AboutSection = ({ isVisible }) => {
+const AboutSection = () => {
   return (
     <section className="section" id="about">
+      {/* About My Self */}
       <div className="about-introduce">
-        <span className="fs-6" style={{ color: "#9e9e9e" }}>
+        <span className="hidden-element fs-6" style={{ color: "#9e9e9e" }}>
           A FEW WORDS ABOUT ME
         </span>
-        <p className="fs-1 fw-bolder">
-          I'm Tran Trong Hien, a Front-end Developer. And now i'm in school with
-          6 months experience but i always learn new things everyday to make
-          myself better.
+        <p className="hidden-element fs-1 fw-bolder">
+          I'm Tran Trong Hien, a Front-end Developer. And now i'm in college
+          with 6 months experience but i always learn new things everyday to
+          make myself better.
         </p>
-        <p className="fs-6 my-5 px-5 px-sm-0" style={{ color: "#9e9e9e" }}>
+        <p
+          className="hidden-element fs-5 my-5 fw-bold px-5 px-sm-0"
+          style={{ color: "#9e9e9e" }}
+        >
           I'm in love design and devlopment a beautiful UI. Beside design and
           coding I'm also in love with instrument. Playing guitar, piano in
           freetime is very comfortable.
         </p>
-        <div className="author-img d-block">
+        <div className="hidden-element author-img d-block">
           <img
             src={image}
             className="image-fluid"
@@ -33,14 +37,16 @@ const AboutSection = ({ isVisible }) => {
         </div>
       </div>
       <hr style={{ color: "#9e9e9e" }} />
+
+      {/* My SKill */}
       <div className="yourself skill my-5">
-        <span className="fs-6" style={{ color: "#9e9e9e" }}>
+        <span className="hidden-element fs-6" style={{ color: "#9e9e9e" }}>
           DEVELOPMENT - DESIGN - OTHER
         </span>
-        <p className="fs-1 fw-bolder mb-5">Personal Skill</p>
+        <p className="hidden-element fs-1 fw-bolder mb-5">Personal Skill</p>
         <div className="row justify-content-center">
           {/* Column  */}
-          <div className="col-6 fs-5 fw-bold">
+          <div className="hidden-element col-6 fs-5 fw-bold">
             <div className="fs-5 my-2" style={{ color: "#9e9e9e" }}>
               FRONT-END
             </div>
@@ -81,7 +87,7 @@ const AboutSection = ({ isVisible }) => {
             </div>
           </div>
           {/* Column  */}
-          <div className="col-6 fs-5 fw-bold">
+          <div className="hidden-element col-6 fs-5 fw-bold">
             <div className="fs-5 my-2" style={{ color: "#9e9e9e" }}>
               BACK-END
             </div>
@@ -116,7 +122,7 @@ const AboutSection = ({ isVisible }) => {
             </div>
           </div>
           {/* Column  */}
-          <div className="col-12 my-5 fs-5 fw-bold">
+          <div className="hidden-element col-12 my-5 fs-5 fw-bold">
             <div className="fs-5 my-2" style={{ color: "#9e9e9e" }}>
               OTHER
             </div>
@@ -150,7 +156,7 @@ const AboutSection = ({ isVisible }) => {
               </span>
             </div>
           </div>
-          <div className="col-6 my-5 fs-5 fw-bold"></div>
+          <div className="hidden-element col-6 my-5 fs-5 fw-bold"></div>
         </div>
       </div>
     </section>

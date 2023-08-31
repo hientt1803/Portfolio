@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../image/logoAdmin.png";
+import logo from "../image/logo.png";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,22 +18,22 @@ const Menu = () => {
     <>
       <header
         style={{ zIndex: "999" }}
-        className="sticky-header container-fluid bg-white d-flex justify-content-between align-items-center"
+        className="sticky-header container-xxl bg-white d-flex justify-content-between align-items-center"
       >
-        <div className="d-flex justify-content-start gap-2">
-          <a href={"#"} className="navbar-brand fw-bolder">
+        <a href="#" className="d-flex justify-content-start gap-2 navbar-brand">
+          <a href={"#"}>
             <img
               src={logo}
               alt="Logo"
-              style={{ width: "80px", height: "80px" }}
+              style={{ width: "47px", height: "47px" }}
               className="img-fluid"
             />
           </a>
           <div className="d-flex flex-column d-none d-md-flex justify-content-center align-items-start fw-bolder">
-            <span>Tran Trong Hien</span>
-            <span>WEB & UI DESIGNER</span>
+            <span className="fw-bolder">Tran Trong Hien</span>
+            <span className="fw-bold text-muted">WEB & UI DESIGNER</span>
           </div>
-        </div>
+        </a>
 
         {/* Right side navbar */}
         <div className="right-side-nav d-flex align-items-center gap-5">
@@ -73,7 +73,7 @@ const Menu = () => {
         <div className="overlay-content d-flex flex-column">
           <ul>
             <li>
-              <span className="fs-5" style={{ color: "#adadad;" }}>
+              <span className="fs-5" style={{ color: "#adadad" }}>
                 MENU
               </span>
             </li>

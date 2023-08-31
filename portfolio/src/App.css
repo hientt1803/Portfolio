@@ -99,13 +99,15 @@
 }
 
 .hidden-element {
-  opacity: 0;
   transform: translateY(20px);
+  filter: blur(5px);
+  opacity: 0;
   transition: var(--smooth-show-on-scroll);
 }
 
 .visible {
   transform: translateY(0);
+  filter: blur(0);
   opacity: 1;
 }
 
@@ -159,6 +161,14 @@
   width: 100px;
 }
 
+.navbar-brand {
+  transition: var(--smooth);
+}
+
+.navbar-brand:hover {
+  color: #999999;
+}
+
 .overlay a:hover,
 .overlay a:focus {
   color: #f1f1f1;
@@ -200,9 +210,11 @@
 
 .project-item {
   position: relative;
-  height: 500px;
+  height: 600px;
   background-position: center center;
   background-size: cover;
+  object-fit: cover;
+  object-position: center;
   cursor: pointer;
   text-align: left;
   /* filter: gray;
@@ -275,13 +287,13 @@
 
 .scrollTopButton span {
   cursor: pointer;
-  background: #c0c0c0;
+  background: rgba(0, 0, 0, 0.4);
   transition: var(--smooth);
 }
 
 .scrollTopButton:hover span {
   background: rgba(0, 0, 0, 0.85);
-  color: #f1f1f1;
+  color: rgba(241, 241, 241, 0.3);
 }
 
 /* About */
@@ -304,4 +316,95 @@
 /* Contact */
 #contact {
   padding: 0;
+}
+
+/* Footer */
+.text-line-end {
+  position: relative;
+}
+
+.text-line-end::after {
+  content: '';
+  position: absolute;
+  bottom: 25%;
+  right: -28%;
+  width: 30px;
+  height: 4px;
+  background: #000;
+}
+
+/* Loading */
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgb(11, 14, 31); */
+  background: #0f141eff;
+  z-index: 100000;
+  top: 0;
+  color: #c5c5c5;
+  transition: var(--smooth);
+}
+
+.loading .loadingImage {
+  width: 100vw;
+  height: 100vh;
+  margin: -4%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.loading .infinity-water {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  opacity: 1;
+  border-radius: 50%;
+  background: #e7e7e7;
+  box-shadow: 5px 5px 5px 5px #cecece4d;
+  animation: waterEffect 1s ease infinite;
+  transition: var(--smooth);
+}
+
+@keyframes waterEffect {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  to {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
+
+.loading-fade-out {
+  animation-name: fade-out;
+  animation-duration: 0.6s;
+  animation-delay: 4s;
+  transition: var(--smooth);
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    height: 100vh;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.img-loading-logo {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
