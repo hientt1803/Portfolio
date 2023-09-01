@@ -1,8 +1,9 @@
 import { React } from "react";
+import { Link } from "react-router-dom";
 import eCommerceImage from "../image/e-commerce.jpg";
 import videoPlatform from "../image/video-platform.jpg";
 
-const ProjectSection = ({ isVisible }) => {
+const ProjectSection = () => {
   return (
     <section className="section" id="projects">
       <h6 className="hidden-element text-start" style={{ color: "#9e9e9e" }}>
@@ -13,8 +14,8 @@ const ProjectSection = ({ isVisible }) => {
       </h1>
       <div className="projects pt-5">
         {/* Item */}
-        <a
-          href="#home"
+        <Link
+          to={"/project"}
           className="hidden-element project-item text-decoration-none"
           style={{ background: `url(${eCommerceImage})` }}
         >
@@ -31,16 +32,16 @@ const ProjectSection = ({ isVisible }) => {
                 08-2023
               </span>
               <strong className="fs-1 mb-2">E-Commerce Website</strong>
-              <a href="#" className="text-white delay-200">
+              <Link to={"/project"} className="text-white delay-200">
                 view project{" "}
                 <i className="fa-solid fa-arrow-right-long ms-2"></i>
-              </a>
+              </Link>
             </div>
           </div>
-        </a>
+        </Link>
         {/* Item */}
-        <a
-          href="#home"
+        <Link
+          to={"/project"}
           className="hidden-element project-item text-decoration-none"
           style={{ background: `url(${videoPlatform})` }}
         >
@@ -57,12 +58,12 @@ const ProjectSection = ({ isVisible }) => {
                 12-2022
               </span>
               <strong className="fs-1 mb-2">Video platform Website</strong>
-              <a href="#" className="text-white delay-200">
+              <Link to={"/project"} className="text-white delay-200">
                 view project <i className="fa-solid fa-arrow-right ms-2"></i>
-              </a>
+              </Link>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </section>
   );
