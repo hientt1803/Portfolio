@@ -4,6 +4,23 @@ import eCommerceImage from "../image/e-commerce.jpg";
 import videoPlatform from "../image/video-platform.jpg";
 
 const ProjectSection = () => {
+  const projects = [
+    {
+      id: 1,
+      path: "/project",
+      background: eCommerceImage,
+      date: "08-2023",
+      title: "E-Commerce Website",
+    },
+    {
+      id: 2,
+      path: "/project",
+      background: videoPlatform,
+      date: "12-2022",
+      title: "Video Platform Website",
+    },
+  ];
+
   return (
     <section className="section" id="projects">
       <h6 className="hidden-element text-start" style={{ color: "#9e9e9e" }}>
@@ -14,7 +31,38 @@ const ProjectSection = () => {
       </h1>
       <div className="projects pt-5">
         {/* Item */}
-        <Link
+        {projects.map((project) => (
+          <Link
+            key={project.id}
+            to={{ pathname: `project/${project.id}` }}
+            className="hidden-element project-item text-decoration-none"
+            style={{ background: `url(${project.background})` }}
+          >
+            <div className="item-content m-5 d-flex flex-column ">
+              <span className="fs-4" style={{ color: "#9e9e9e" }}>
+                {project.date}
+              </span>
+              <strong className="fs-1">{project.title}</strong>
+            </div>
+            <div className="overlay-project">
+              <div className="item-content-overlay m-5 d-flex flex-column text-white">
+                <span className="fs-4" style={{ color: "#9e9e9e" }}>
+                  {project.date}
+                </span>
+                <strong className="fs-1 mb-2">{project.title}</strong>
+                <Link
+                  to={{ pathname: `project/${project.id}` }}
+                  className="text-white delay-200"
+                >
+                  view project
+                  <i className="fa-solid fa-arrow-right-long ms-2"></i>
+                </Link>
+              </div>
+            </div>
+          </Link>
+        ))}
+
+        {/* <Link
           to={"/project"}
           className="hidden-element project-item text-decoration-none"
           style={{ background: `url(${eCommerceImage})` }}
@@ -25,7 +73,6 @@ const ProjectSection = () => {
             </span>
             <strong className="fs-1">E-Commerce Website</strong>
           </div>
-          {/* Over lay */}
           <div className="overlay-project">
             <div className="item-content-overlay m-5 d-flex flex-column text-white">
               <span className="fs-4" style={{ color: "#9e9e9e" }}>
@@ -38,9 +85,9 @@ const ProjectSection = () => {
               </Link>
             </div>
           </div>
-        </Link>
+        </Link> */}
         {/* Item */}
-        <Link
+        {/* <Link
           to={"/project"}
           className="hidden-element project-item text-decoration-none"
           style={{ background: `url(${videoPlatform})` }}
@@ -51,7 +98,6 @@ const ProjectSection = () => {
             </span>
             <strong className="fs-1">Video platform Website</strong>
           </div>
-          {/* Over lay */}
           <div className="overlay-project">
             <div className="item-content-overlay m-5 d-flex flex-column text-white">
               <span className="fs-4" style={{ color: "#9e9e9e" }}>
@@ -63,7 +109,7 @@ const ProjectSection = () => {
               </Link>
             </div>
           </div>
-        </Link>
+        </Link> */}
       </div>
     </section>
   );

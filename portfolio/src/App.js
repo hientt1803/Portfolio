@@ -11,7 +11,7 @@ import Loading from "./component/Loading";
 function App() {
   // Show on scroll
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,11 +38,15 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    setIsLoading(true);
+  }, []);
+
   // IsLoading
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 4400);
+    }, 2400);
     return () => clearTimeout(timeout);
   }, [isLoading]);
 
@@ -67,12 +71,7 @@ function App() {
   }, []);
 
   return (
-    <div
-      className="App"
-      data-bs-spy="scroll"
-      data-bs-target="#myNav"
-      tabindex="0"
-    >
+    <div className="App">
       <Menu />
       <div className="container-xxl position-relative">
         <HeroSection {...{ isVisible }} />

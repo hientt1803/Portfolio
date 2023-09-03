@@ -2,7 +2,7 @@ import { React } from "react";
 import logo from "../image/logo.png";
 import loadingImage from "../image/loadingBackground.jpg";
 
-const ProjectSection = () => {
+const Loading = () => {
   return (
     <>
       <div className="loading loading-fade-out">
@@ -49,4 +49,4 @@ const ProjectSection = () => {
   );
 };
 
-export default ProjectSection;
+export default Loading;

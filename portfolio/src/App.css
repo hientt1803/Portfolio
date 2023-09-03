@@ -387,7 +387,7 @@
   opacity: 1;
   border-radius: 50%;
   background: #e7e7e7;
-  box-shadow: 5px 5px 5px 5px #cecece4d;
+  /* box-shadow: 5px 5px 5px 5px #cecece4d; */
   animation: waterEffect 1s ease infinite;
   transition: var(--smooth);
 }
@@ -409,7 +409,7 @@
 .loading-fade-out {
   animation-name: fade-out;
   animation-duration: 0.6s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   transition: var(--smooth);
 }
 
@@ -437,19 +437,4 @@
 
 .menu-link.active.navbar-hover-link::after {
   width: 100px;
-}
-
-.slide-in {
-  animation: slide-in 0.6s 0.4s;
-  transition: var(--smooth);
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
