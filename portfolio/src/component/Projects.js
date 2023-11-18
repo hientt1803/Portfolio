@@ -1,23 +1,23 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
-import eCommerceImage from "../image/e-commerce.jpg";
-import videoPlatform from "../image/video-platform.jpg";
+import eCommerceImage from "../assets/image/e-commerce.jpg";
 
 const ProjectSection = () => {
   const projects = [
     {
       id: 1,
       path: "/project",
-      background: eCommerceImage,
-      date: "08-2023",
-      title: "E-Commerce Website",
+      background:
+        "https://images.pexels.com/photos/1848731/pexels-photo-1848731.jpeg?auto=compress&cs=tinysrgb&w=640",
+      date: "11-2023",
+      title: "Education System Manager",
     },
     {
       id: 2,
       path: "/project",
-      background: videoPlatform,
-      date: "12-2022",
-      title: "Video Platform Website",
+      background: eCommerceImage,
+      date: "08-2023",
+      title: "E-Commerce Website",
     },
   ];
 
@@ -36,7 +36,7 @@ const ProjectSection = () => {
             key={project.id}
             to={{ pathname: `project/${project.id}` }}
             className="hidden-element project-item text-decoration-none"
-            style={{ background: `url(${project.background})` }}
+            style={{ background: `url(${project.background}) no-repeat` }}
           >
             <div className="item-content m-5 d-flex flex-column ">
               <span className="fs-4" style={{ color: "#9e9e9e" }}>

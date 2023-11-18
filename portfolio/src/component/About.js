@@ -1,5 +1,5 @@
 import { React } from "react";
-import image from "../authorImage.jpg";
+import image from "../assets/image/authorImage.jpg";
 
 const AboutSection = () => {
   return (
@@ -10,7 +10,7 @@ const AboutSection = () => {
           A FEW WORDS ABOUT ME
         </span>
         <p className="hidden-element fs-1 fw-bolder">
-          I'm Tran Trong Hien, a Front-end Developer. And now i'm in college
+          I'm Tran Trong Hien, a Full Stack Developer. And now i'm in college
           with 6 months experience but i always learn new things everyday to
           make myself better.
         </p>
@@ -46,7 +46,7 @@ const AboutSection = () => {
         <p className="hidden-element fs-1 fw-bolder mb-5">Personal Skill</p>
         <div className="row justify-content-center">
           {/* Column  */}
-          <div className="hidden-element col-6 fs-5 fw-bold">
+          <div className="hidden-element col-xl-6 col-lg-6 col-md-6 col-sm-12 fs-5 fw-bold">
             <div className="fs-5 my-2" style={{ color: "#9e9e9e" }}>
               FRONT-END
             </div>
@@ -87,7 +87,7 @@ const AboutSection = () => {
             </div>
           </div>
           {/* Column  */}
-          <div className="hidden-element col-6 fs-5 fw-bold">
+          <div className="hidden-element col-xl-6 col-lg-6 col-md-6 col-sm-12 fs-5 fw-bold">
             <div className="fs-5 my-2" style={{ color: "#9e9e9e" }}>
               BACK-END
             </div>
@@ -122,7 +122,7 @@ const AboutSection = () => {
             </div>
           </div>
           {/* Column  */}
-          <div className="hidden-element col-12 my-5 fs-5 fw-bold">
+          <div className="hidden-element col-12 mx-auto my-5 fs-5 fw-bold">
             <div className="fs-5 my-2" style={{ color: "#9e9e9e" }}>
               OTHER
             </div>
@@ -151,8 +151,16 @@ const AboutSection = () => {
                   /
                 </span>
               </span>
+              {/* Item */}
               <span className="skill item">
                 <span className="fs-5">Trello</span>
+                <span className="mx-2" style={{ color: "#9e9e9e" }}>
+                  /
+                </span>
+              </span>
+              {/* Item */}
+              <span className="skill item">
+                <span className="fs-5">Docker</span>
               </span>
             </div>
           </div>

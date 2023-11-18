@@ -1,13 +1,73 @@
 import { React, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import FooterSection from "../component/Footer";
 import Menu from "../component/Menu";
-import eCommerceImage from "../image/e-commerce.jpg";
-import videoPlatform from "../image/video-platform.jpg";
+import eCommerceImage from "../assets/image/e-commerce.jpg";
+
+const projects = [
+  {
+    id: 1,
+    path: "/project",
+    date: "11-2023",
+    title: "EDUCATION SYSTEM MANAGER",
+    firstSmallImage: eCommerceImage,
+    secondSmallImage: eCommerceImage,
+    firstLargeImage: eCommerceImage,
+    secondLargeImage: eCommerceImage,
+    listImage: [
+      {
+        id: 1,
+        image:
+          "https://images.pexels.com/photos/3769139/pexels-photo-3769139.jpeg?auto=compress&cs=tinysrgb&w=400",
+      },
+    ],
+    introText:
+      "Introducing F4 Education System Manager - Your Ultimate Solution for Programming Center Management" +
+      "Welcome to F4 Education System Manager, the cutting-edge platform designed to revolutionize the way" +
+      "programming centers operate and thrive. Our website serves as a comprehensive solution for both selling and" +
+      "efficiently managing programming education programs. Whether you are an educational institution, coding bootcamp, " +
+      "or an individual instructor, F4 Education System Manager is tailored to meet your unique needs and elevate the entire learning experience." +
+      "Efficient Program Management: From scheduling classes to tracking student progress, our system offers a robust set of tools to streamline the " +
+      "day-to-day operations of your programming center. Manage course materials, assignments, and assessments with ease, allowing you to focus more on delivering quality education...",
+  },
+  {
+    id: 2,
+    path: "/project",
+    date: "08-2023",
+    title: "E-Commerce Website",
+    firstSmallImage: eCommerceImage,
+    secondSmallImage: eCommerceImage,
+    firstLargeImage: eCommerceImage,
+    secondLargeImage: eCommerceImage,
+    listImage: [
+      {
+        id: 1,
+        image:
+          "https://images.pexels.com/photos/3769139/pexels-photo-3769139.jpeg?auto=compress&cs=tinysrgb&w=400",
+      },
+    ],
+    introText:
+      "At 4MEMS, we understand the importance of technology in enhancing our daily lives. Whether you're a" +
+      " music enthusiast seeking high-quality audio experiences or a tech-savvy individual looking for the latest" +
+      " gadgets, our platform offers a convenient and reliable way to explore and purchase the tech products you desire." +
+      "Our extensive catalog features a diverse selection of earpods, allowing you to enjoy your favorite music, podcasts," +
+      "and phone calls with exceptional sound quality and comfort. We carefully curate our collection to ensure that you have" +
+      " access to the most innovative and reliable brands and models in the market" +
+      "In addition to earpods, we also offer a range of speakers that deliver immersive" +
+      "audio experiences for your home, office, or on-the-go. Whether you're hosting a party, watching a movie, or simply " +
+      "enjoying your favorite tunes, our speakers will elevate your audio experience to new heights...",
+  },
+];
 
 const ProjectPage = () => {
+  // Param
+  const { id } = useParams();
+  const project = projects.find((pj) => pj.id.toString() === id);
+
   // Show on scroll
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [listImage, setListImage] = useState(project.listImage);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,47 +115,14 @@ const ProjectPage = () => {
     };
   }, []);
 
-  const projects = [
-    {
-      id: 1,
-      path: "/project",
-      background: eCommerceImage,
-      date: "08-2023",
-      title: "E-Commerce Website",
-      introText:
-        "At 4MEMS, we understand the importance of technology in enhancing our daily lives. Whether you're a" +
-        " music enthusiast seeking high-quality audio experiences or a tech-savvy individual looking for the latest" +
-        " gadgets, our platform offers a convenient and reliable way to explore and purchase the tech products you desire." +
-        "Our extensive catalog features a diverse selection of earpods, allowing you to enjoy your favorite music, podcasts," +
-        "and phone calls with exceptional sound quality and comfort. We carefully curate our collection to ensure that you have" +
-        " access to the most innovative and reliable brands and models in the market" +
-        "In addition to earpods, we also offer a range of speakers that deliver immersive" +
-        "audio experiences for your home, office, or on-the-go. Whether you're hosting a party, watching a movie, or simply " +
-        "enjoying your favorite tunes, our speakers will elevate your audio experience to new heights.",
-    },
-    {
-      id: 2,
-      path: "/project",
-      background: videoPlatform,
-      date: "08-2023",
-      title: "Video-platform Website",
-      introText:
-        "Welcome to VIT, your ultimate video platform where creativity meets community! Our website is designed" +
-        "to provide you with an immersive experience in the world of online videos, allowing you to upload, discover, " +
-        "like, share, and engage with a diverse range of content.At VIT, we understand the power of video as a medium of" +
-        "expression and entertainment. Whether you are a budding content creator looking to showcase your talent, or a passionate" +
-        "viewer seeking captivating videos, our platform offers a seamless and user-friendly environment to fulfill your needs.For creators," +
-        " VIT provides a dynamic space to share your unique vision with the world. Whether you're an aspiring filmmaker, a talented musician, an " +
-        "inspiring vlogger, or an innovative animator, our platform welcomes all forms of video content. With easy upload options, you can effortlessly" +
-        "share your creations and connect with a global audience hungry for fresh, compelling videos.As a viewer, VIT offers an endless array of video content" +
-        " to explore. Our intuitive search and recommendation algorithms ensure that you'll always find something that piques your interest. From heartwarming stories" +
-        " to thrilling adventures, from thought-provoking documentaries to hilarious comedy sketches, VIT has it all. You can easily navigate through various categories, " +
-        "trending videos, or even follow your favorite creators to stay up-to-date with their latest releases",
-    },
-  ];
-  const { id } = useParams();
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.scrollingElement.scrollTop = 0;
+  }, []);
 
-  const project = projects.find((pj) => pj.id.toString() === id);
+  useEffect(() => {
+    setListImage(project.listImage);
+  }, []);
 
   return (
     <>
@@ -108,20 +135,20 @@ const ProjectPage = () => {
               className="hidden-element text-start"
               style={{ color: "#9e9e9e" }}
             >
-              PERSONAL PROJECT
+              GROUP PROJECT
             </h6>
             <h1 className="hidden-element fw-bolder display-2 mb-5 text-start delay-200">
               {project.title}
             </h1>
-            <h6
+            <h5
               className="hidden-element text-start"
               style={{ color: "#9e9e9e" }}
             >
               YEAR
-            </h6>
-            <h6 className="hidden-element text-start fw-bold">
+            </h5>
+            <h5 className="hidden-element text-start fw-bold">
               {project.date}
-            </h6>
+            </h5>
           </div>
           {/* Item */}
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -130,6 +157,7 @@ const ProjectPage = () => {
             </h5>
           </div>
         </div>
+
         {/* Project Overviw */}
         <div className="row">
           <h6
@@ -139,36 +167,116 @@ const ProjectPage = () => {
             PROJECT OVERVIEW
           </h6>
           <h1 className="hidden-element fw-bolder display-2 mb-5 text-start delay-200">
-            Some images of the project
+            Some image of project
           </h1>
           <div className="col-12 my-5">
-            <div
-              className="hidden-element text-decoration-none"
-              style={{ background: `url(${eCommerceImage})`, height: "600px" }}
-            >
-              <div className="item-content m-5 pt-5 d-flex flex-column ">
-                <span className="fs-4" style={{ color: "#9e9e9e" }}>
-                  Client
-                </span>
-                <strong className="fs-1">Shop Page</strong>
+            {/* First row image */}
+            <div className="row">
+              <div className="col-lg-7 col-xl-7 col-md-7 col-sm-12">
+                <div
+                  className="hidden-element project-page-img text-decoration-none"
+                  style={{
+                    background: `url(${project.firstLargeImage})`,
+                  }}
+                >
+                  <div className="item-content m-5 pt-5 d-flex flex-column ">
+                    <span className="fs-4" style={{ color: "#9e9e9e" }}>
+                      Client
+                    </span>
+                    <strong className="fs-1">Shop Page</strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-5 col-xl-5 col-md-5 col-sm-12">
+                <div
+                  className="hidden-element project-page-img text-decoration-none"
+                  style={{
+                    background: `url(${project.firstSmallImage})`,
+                  }}
+                >
+                  <div className="item-content m-5 pt-5 d-flex flex-column ">
+                    <span className="fs-4" style={{ color: "#9e9e9e" }}>
+                      Client
+                    </span>
+                    <strong className="fs-1">Home</strong>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Second row image */}
+            <div className="row">
+              <div className="col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <div
+                  className="hidden-element project-page-img text-decoration-none"
+                  style={{
+                    background: `url(${project.firstSmallImage})`,
+                  }}
+                >
+                  <div className="item-content m-5 pt-5 d-flex flex-column ">
+                    <span className="fs-4" style={{ color: "#9e9e9e" }}>
+                      Client
+                    </span>
+                    <strong className="fs-1">Shop Page</strong>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-8 col-xl-8 col-md-8 col-sm-12">
+                <div
+                  className="hidden-element project-page-img text-decoration-none"
+                  style={{
+                    background: `url(${project.firstLargeImage})`,
+                  }}
+                >
+                  <div className="item-content m-5 pt-5 d-flex flex-column ">
+                    <span className="fs-4" style={{ color: "#9e9e9e" }}>
+                      Client
+                    </span>
+                    <strong className="fs-1">Home</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Third row image */}
+            <h1 className="mt-5 mb-3 text-decoration-underline fw-bold">
+              More Image
+            </h1>
+            {listImage.map((image) => (
+              <>
+                <div className="col-12" key={image.id}>
+                  <div
+                    className="hidden-element project-page-img text-decoration-none"
+                    style={{
+                      background: `url(${image.image}) no-repeat`,
+                    }}
+                  ></div>
+                </div>
+              </>
+            ))}
+
+            {/* Comeback section */}
           </div>
-          <div className="col-12 my-5">
-            <div
-              className="hidden-element text-decoration-none"
-              style={{ background: `url(${videoPlatform})`, height: "600px" }}
+          <div className="col-12 my-5 py-5 text-center">
+            <p
+              className="hidden-element text-center"
+              style={{ color: "#9e9e9e" }}
             >
-              <div className="item-content m-5 pt-5 d-flex flex-column ">
-                <span className="fs-4" style={{ color: "#9e9e9e" }}>
-                  Client
-                </span>
-                <strong className="fs-1">Home</strong>
-              </div>
-            </div>
+              DOESN'T SEE ANYTHING LEFT
+            </p>
+            <Link
+              to="/"
+              className="hidden-element display-4 fw-bolder text-dark text-decoration-none hover-link"
+            >
+              Get back
+              <i className="fa-solid fa-arrow-right-long ms-4"></i>
+            </Link>
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <FooterSection />
     </>
   );
 };

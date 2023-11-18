@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
+
+// CSS
 import "./App.css";
+
+// component import
 import AboutSection from "./component/About";
 import ContactSection from "./component/Contact";
 import FooterSection from "./component/Footer";
@@ -11,7 +15,10 @@ import Loading from "./component/Loading";
 function App() {
   // Show on scroll
   const [isVisible, setIsVisible] = useState(false);
+
+  // Loading screen
   const [isLoading, setIsLoading] = useState(false);
+  const [emailActive, setEmailActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,27 +79,58 @@ function App() {
 
   return (
     <div className="App">
+      {/* Menu */}
       <Menu />
+
       <div className="container-xxl position-relative">
+        {/* Hero section */}
         <HeroSection {...{ isVisible }} />
+
+        {/* Project */}
         <ProjectSection {...{ isVisible }} />
-        {/* <div className="hidden-element" ref={animationRef}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, quasi
-          quia eaque ea eligendi sunt tempore aliquam fugit veritatis quae!
-        </div> */}
+
+        {/* About */}
         <AboutSection {...{ isVisible }} />
+
+        {/* Contact */}
         <ContactSection />
 
-        <div className="position-fixed" style={{ bottom: "20px" }}>
+        {/* Email button*/}
+        <div
+          className="position-fixed"
+          style={{ bottom: "20px", transition: "all 0.5s ease" }}
+        >
           <a
             className="d-flex justify-content-center align-items-center p-3
             rounded-5 text-white text-decoration-none 
             email-fixed-bottom"
             href={"mailTo:tronghientran18@gmail.com"}
+            onMouseEnter={() => {
+              setEmailActive(true);
+            }}
+            onMouseLeave={() => {
+              setEmailActive(false);
+            }}
           >
-            <i className="fa-regular fa-envelope"></i>
+            {emailActive ? (
+              <>
+                <span style={{ transition: "all 0.5s ease" }}>
+                  <i className="fa-regular fa-envelope me-2" />
+                  contact me
+                </span>
+              </>
+            ) : (
+              <>
+                <i
+                  className="fa-regular fa-envelope"
+                  style={{ transition: "all 0.5s ease" }}
+                />
+              </>
+            )}
           </a>
         </div>
+
+        {/* Scroll to Top button */}
         <div className="scrollTopButton" onClick={scrollToTop}>
           <span
             className="d-flex justify-content-center align-items-center p-3
@@ -102,6 +140,8 @@ function App() {
           </span>
         </div>
       </div>
+
+      {/*  */}
       <FooterSection />
       {isLoading && (
         <>

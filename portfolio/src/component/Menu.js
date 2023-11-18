@@ -25,18 +25,26 @@ const Menu = () => {
     {
       name: "Home",
       href: "#",
+      imageURL:
+        "https://images.pexels.com/photos/15118791/pexels-photo-15118791/free-photo-of-a-person-holding-a-picture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
     },
     {
       name: "Projects",
       href: "#projects",
+      imageURL:
+        "https://images.pexels.com/photos/15118791/pexels-photo-15118791/free-photo-of-a-person-holding-a-picture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
     },
     {
       name: "About",
       href: "#about",
+      imageURL:
+        "https://images.pexels.com/photos/15118791/pexels-photo-15118791/free-photo-of-a-person-holding-a-picture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
     },
     {
       name: "Contact",
       href: "#contact",
+      imageURL:
+        "https://images.pexels.com/photos/15118791/pexels-photo-15118791/free-photo-of-a-person-holding-a-picture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
     },
   ];
 
@@ -110,42 +118,60 @@ const Menu = () => {
               </span>
             </li>
             {menuLinks.map((menu, index) => (
-              <li>
+              <li key={index}>
                 <a
-                  key={index}
                   href={menu.href}
-                  className={`menu-link navbar-hover-link ${
+                  className={`menu-link navbar-hover-link ${menu.name} ${
                     isOpen ? "slide-in" : ""
                   }`}
                   alt={menu.name}
+                  onClick={() => closeNav()}
                 >
                   {menu.name}
                 </a>
               </li>
             ))}
-            ;
             {/* <li>
-              <span className="fs-5" style={{ color: "#adadad" }}>
-                MENU
-              </span>
-            </li>
-            <li>
-              <a className="menu-link navbar-hover-link active" href={"#"}>
+              <a
+                href="#"
+                className={`menu-link navbar-hover-link ${
+                  isOpen ? "slide-in" : ""
+                }`}
+                alt={"home"}
+              >
                 Home
               </a>
             </li>
             <li>
-              <a className="menu-link navbar-hover-link" href={"#projects"}>
+              <a
+                href="#projects"
+                className={`menu-link navbar-hover-link ${
+                  isOpen ? "slide-in" : ""
+                }`}
+                alt={"home"}
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a className="menu-link navbar-hover-link" href={"#about"}>
+              <a
+                href={"#about"}
+                className={`menu-link navbar-hover-link ${
+                  isOpen ? "slide-in" : ""
+                }`}
+                alt={"home"}
+              >
                 About
               </a>
             </li>
             <li>
-              <a className="menu-link navbar-hover-link" href={"#contact"}>
+              <a
+                href={"#contact"}
+                className={`menu-link navbar-hover-link ${
+                  isOpen ? "slide-in" : ""
+                }`}
+                alt={"home"}
+              >
                 Contact
               </a>
             </li> */}

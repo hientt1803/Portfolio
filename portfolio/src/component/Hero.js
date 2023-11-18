@@ -1,5 +1,5 @@
 import React from "react";
-import heroBaner from "../image/hero-banner.jpg";
+import heroBaner from "../assets/image/hero-banner.jpg";
 
 const HeroSection = () => {
   return (

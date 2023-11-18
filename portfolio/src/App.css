@@ -113,16 +113,12 @@
 
 /* Email fixed bottom */
 .email-fixed-bottom {
-  clear: both;
   background: rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: var(--smooth);
 }
 
 .email-fixed-bottom:hover {
-  display: flex;
-  justify-content: space-between;
-  width: 120px;
   background: #0f141eff;
   color: #fff;
   transition: var(--smooth);
@@ -163,6 +159,63 @@
   font-size: 4rem;
   color: #818181;
   transition: var(--smooth);
+}
+
+.navbar-hover-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-hover-link.Projects:hover::before {
+  content: "";
+  position: absolute;
+  top: -250%;
+  right: -40%;
+  bottom: 0;
+  left: 0;
+  background-image: url("https://images.pexels.com/photos/15118791/pexels-photo-15118791/free-photo-of-a-person-holding-a-picture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load");
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  opacity: 0.25;
+  width: 700px !important;
+  height: 700px !important;
+  z-index: -1;
+  transition: var(--smooth);
+}
+
+.navbar-hover-link.About:hover::before {
+  content: "";
+  position: absolute;
+  top: -250%;
+  right: -40%;
+  bottom: 0;
+  left: 0;
+  background-image: url("https://images.pexels.com/photos/17216968/pexels-photo-17216968/free-photo-of-sitting-in-chair-man-admiring-idyllic-landscape.jpeg?auto=compress&cs=tinysrgb&w=400");
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  opacity: 0.25;
+  width: 700px !important;
+  height: 700px !important;
+  z-index: -1;
+}
+
+.navbar-hover-link.Contact:hover::before {
+  content: "";
+  position: absolute;
+  top: -250%;
+  right: -40%;
+  bottom: 0;
+  left: 0;
+  background-image: url("https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&w=400");
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  opacity: 0.25;
+  width: 700px !important;
+  height: 700px !important;
+  z-index: -1;
 }
 
 .overlay-content .navbar-hover-link::after {
@@ -233,8 +286,8 @@
   height: 600px;
   background-position: center center;
   background-size: cover;
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
+  /* object-position: center; */
   cursor: pointer;
   text-align: left;
   /* filter: gray;
@@ -437,4 +490,13 @@
 
 .menu-link.active.navbar-hover-link::after {
   width: 100px;
+}
+
+/* Project Page */
+.project-page-img {
+  height: 500px;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
 }
