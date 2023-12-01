@@ -4,21 +4,64 @@ import FooterSection from "../component/Footer";
 import Menu from "../component/Menu";
 import eCommerceImage from "../assets/image/e-commerce.jpg";
 
+// Education
+import edu4 from "../assets/image/education/1-fullscr.png";
+import edu5 from "../assets/image/education/2-fullscr.png";
+import edu6 from "../assets/image/education/3-fullscr.png";
+import edu7 from "../assets/image/education/10-full.png";
+import edu8 from "../assets/image/education/4-fullscr.png";
+import edu9 from "../assets/image/education/6-fullscr.png";
+import edu10 from "../assets/image/education/7-fullsrc.png";
+import edu11 from "../assets/image/education/9-full.png";
+import edu12 from "../assets/image/education/classResult.png";
+import edu13 from "../assets/image/education/teacher-class_result.png";
+
 const projects = [
   {
     id: 1,
     path: "/project",
     date: "11-2023",
     title: "EDUCATION SYSTEM MANAGER",
-    firstSmallImage: eCommerceImage,
-    secondSmallImage: eCommerceImage,
-    firstLargeImage: eCommerceImage,
-    secondLargeImage: eCommerceImage,
     listImage: [
       {
         id: 1,
-        image:
-          "https://images.pexels.com/photos/3769139/pexels-photo-3769139.jpeg?auto=compress&cs=tinysrgb&w=400",
+        image: edu4,
+      },
+      {
+        id: 2,
+        image: edu5,
+      },
+      {
+        id: 3,
+        image: edu6,
+      },
+      {
+        id: 4,
+        image: edu7,
+      },
+      {
+        id: 5,
+        image: edu8,
+      },
+      {
+        id: 6,
+        image: edu9,
+      },
+      {
+        id: 7,
+        image: edu10,
+      },
+      {
+        id: 8,
+        image: edu11,
+      },
+      {
+        id: 9,
+        image: edu12,
+      },
+      {
+        id: 10,
+        image: edu13,
       },
     ],
     introText:
@@ -29,6 +72,7 @@ const projects = [
       "or an individual instructor, F4 Education System Manager is tailored to meet your unique needs and elevate the entire learning experience." +
       "Efficient Program Management: From scheduling classes to tracking student progress, our system offers a robust set of tools to streamline the " +
       "day-to-day operations of your programming center. Manage course materials, assignments, and assessments with ease, allowing you to focus more on delivering quality education...",
+    github: "https://github.com/alexnguyen03/f4education",
   },
   {
     id: 2,
@@ -56,6 +100,7 @@ const projects = [
       "In addition to earpods, we also offer a range of speakers that deliver immersive" +
       "audio experiences for your home, office, or on-the-go. Whether you're hosting a party, watching a movie, or simply " +
       "enjoying your favorite tunes, our speakers will elevate your audio experience to new heights...",
+    github: "https://github.com/alexnguyen03/java-6",
   },
 ];
 
@@ -146,8 +191,22 @@ const ProjectPage = () => {
             >
               YEAR
             </h5>
-            <h5 className="hidden-element text-start fw-bold">
+            <h5 className="hidden-element text-start fw-bold mb-5">
               {project.date}
+            </h5>
+            <h5
+              className="hidden-element text-start"
+              style={{ color: "#9e9e9e" }}
+            >
+              GITHUB
+            </h5>
+            <h5>
+              <a
+                href="https://github.com/alexnguyen03/f4education"
+                className="hidden-element text-dark text-start fw-bold"
+              >
+                {project.github}
+              </a>
             </h5>
           </div>
           {/* Item */}
@@ -170,47 +229,15 @@ const ProjectPage = () => {
             Some image of project
           </h1>
           <div className="col-12 my-5">
-            {/* First row image */}
-            <div className="row">
-              <div className="col-lg-7 col-xl-7 col-md-7 col-sm-12">
-                <div
-                  className="hidden-element project-page-img text-decoration-none"
-                  style={{
-                    background: `url(${project.firstLargeImage})`,
-                  }}
-                >
-                  <div className="item-content m-5 pt-5 d-flex flex-column ">
-                    <span className="fs-4" style={{ color: "#9e9e9e" }}>
-                      Client
-                    </span>
-                    <strong className="fs-1">Shop Page</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-5 col-xl-5 col-md-5 col-sm-12">
-                <div
-                  className="hidden-element project-page-img text-decoration-none"
-                  style={{
-                    background: `url(${project.firstSmallImage})`,
-                  }}
-                >
-                  <div className="item-content m-5 pt-5 d-flex flex-column ">
-                    <span className="fs-4" style={{ color: "#9e9e9e" }}>
-                      Client
-                    </span>
-                    <strong className="fs-1">Home</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Second row image */}
-            <div className="row">
+            {/* <div className="row">
               <div className="col-lg-4 col-xl-4 col-md-4 col-sm-12">
                 <div
-                  className="hidden-element project-page-img text-decoration-none"
+                  className="hidden-element project-page-img text-decoration-none border-3"
                   style={{
                     background: `url(${project.firstSmallImage})`,
+                    backgroundSize: "100%",
+                    objectFit: "contain",
                   }}
                 >
                   <div className="item-content m-5 pt-5 d-flex flex-column ">
@@ -223,9 +250,10 @@ const ProjectPage = () => {
               </div>
               <div className="col-lg-8 col-xl-8 col-md-8 col-sm-12">
                 <div
-                  className="hidden-element project-page-img text-decoration-none"
+                  className="hidden-element project-page-img text-decoration-none border-3"
                   style={{
-                    background: `url(${project.firstLargeImage})`,
+                    background: `url(${project.firstLargeImage})`,backgroundSize: "100%",
+                    objectFit: "contain",
                   }}
                 >
                   <div className="item-content m-5 pt-5 d-flex flex-column ">
@@ -235,28 +263,28 @@ const ProjectPage = () => {
                     <strong className="fs-1">Home</strong>
                   </div>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             {/* Third row image */}
             <h1 className="mt-5 mb-3 text-decoration-underline fw-bold">
               More Image
             </h1>
             {listImage.map((image) => (
-              <>
-                <div className="col-12" key={image.id}>
-                  <div
-                    className="hidden-element project-page-img text-decoration-none"
-                    style={{
-                      background: `url(${image.image}) no-repeat`,
-                    }}
-                  ></div>
-                </div>
-              </>
+              <div className="col-12 mb-5" key={image.id}>
+                <div
+                  className="hidden-element project-page-img text-decoration-none border"
+                  style={{
+                    background: `url(${image.image}) no-repeat`,
+                    backgroundSize: "100%",
+                    objectFit: "contain",
+                  }}
+                ></div>
+              </div>
             ))}
-
-            {/* Comeback section */}
           </div>
+
+          {/* Comeback section */}
           <div className="col-12 my-5 py-5 text-center">
             <p
               className="hidden-element text-center"
