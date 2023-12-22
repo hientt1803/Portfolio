@@ -70,7 +70,7 @@ const AboutSection = () => {
               </span>
               {/* Item */}
               <span className="skill item">
-                <span className="fs-5">AngularJS</span>
+                <span className="fs-5">Redux</span>
                 <span className="mx-2" style={{ color: "#9e9e9e" }}>
                   /
                 </span>
@@ -83,6 +83,18 @@ const AboutSection = () => {
               </span>
               <span className="skill item">
                 <span className="fs-5">NextJS</span>
+                <span className="mx-2" style={{ color: "#9e9e9e" }}>
+                  /
+                </span>
+              </span>
+              <span className="skill item">
+                <span className="fs-5">Tailwind, Bootstrap</span>
+                <span className="mx-2" style={{ color: "#9e9e9e" }}>
+                  /
+                </span>
+              </span>
+              <span className="skill item">
+                <span className="fs-5">Ant Design, Mantine</span>
               </span>
             </div>
           </div>
@@ -97,7 +109,7 @@ const AboutSection = () => {
             >
               {/* Item */}
               <span className="skill item">
-                <span className="fs-5">SpringBoot</span>
+                <span className="fs-5">Java, SpringBoot</span>
                 <span className="mx-2" style={{ color: "#9e9e9e" }}>
                   /
                 </span>
@@ -111,7 +123,7 @@ const AboutSection = () => {
               </span>
               {/* Item */}
               <span className="skill item">
-                <span className="fs-5">FireBase</span>
+                <span className="fs-5">FireBase, Postman</span>
                 <span className="mx-2" style={{ color: "#9e9e9e" }}>
                   /
                 </span>

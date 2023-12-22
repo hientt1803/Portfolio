@@ -73,6 +73,14 @@ const projects = [
       "Efficient Program Management: From scheduling classes to tracking student progress, our system offers a robust set of tools to streamline the " +
       "day-to-day operations of your programming center. Manage course materials, assignments, and assessments with ease, allowing you to focus more on delivering quality education...",
     github: "https://github.com/alexnguyen03/f4education",
+    technology: [
+      "React",
+      "Mantine",
+      "Figma",
+      "Spring boot",
+      " RestFullAPI",
+      "Bootstrap",
+    ],
   },
   {
     id: 2,
@@ -100,7 +108,16 @@ const projects = [
       "In addition to earpods, we also offer a range of speakers that deliver immersive" +
       "audio experiences for your home, office, or on-the-go. Whether you're hosting a party, watching a movie, or simply " +
       "enjoying your favorite tunes, our speakers will elevate your audio experience to new heights...",
-    github: "https://github.com/alexnguyen03/java-6",
+    github:
+      "https://github.com/hientt1803/e-commerce-app-springboot-and-reactjs",
+    technology: [
+      "React",
+      "Mantine",
+      "Figma",
+      "Spring boot",
+      " RestFullAPI",
+      "Bootstrap",
+    ],
   },
 ];
 
@@ -200,13 +217,24 @@ const ProjectPage = () => {
             >
               GITHUB
             </h5>
-            <h5>
+            <h5 className="hidden-element text-start fw-bold mb-5">
               <a
                 href="https://github.com/alexnguyen03/f4education"
                 className="hidden-element text-dark text-start fw-bold"
               >
                 {project.github}
               </a>
+            </h5>
+            <h5
+              className="hidden-element text-start"
+              style={{ color: "#9e9e9e" }}
+            >
+              TEACHNOLOGY
+            </h5>
+            <h5>
+              {project.technology.map((item) => (
+                <span>{item}, </span>
+              ))}
             </h5>
           </div>
           {/* Item */}
@@ -267,9 +295,9 @@ const ProjectPage = () => {
             {/* </div> */}
 
             {/* Third row image */}
-            <h1 className="mt-5 mb-3 text-decoration-underline fw-bold">
+            {/* <h1 className="mt-5 mb-3 text-decoration-underline fw-bold">
               More Image
-            </h1>
+            </h1> */}
             {listImage.map((image) => (
               <div className="col-12 mb-5" key={image.id}>
                 <div

@@ -1,18 +1,17 @@
 import React from "react";
-import heroBaner from "../assets/image/hero-banner.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="section position-relative" id="home">
-      <div className="row justify-content-between align-items-center g-5 text-start position-relative over-flow-hidden">
-        <div className="hidden-element col-xl-7 col-lg-7 col-md-12 col-sm-12">
-          <span className="fs-5" style={{ color: "#9e9e9e" }}>
+    <section className="position-relative" id="home">
+      <div className="row justify-content-between align-items-center g-5 text-start hero-container over-flow-hidden">
+        <div className="hidden-element hero-content-container mx-auto col-12">
+          <span className="fs-4" style={{ color: "#9e9e9e" }}>
             TRAN TRONG HIEN
           </span>
-          <h1 className="hidden-element delay-200 fw-bolder display-2 mb-2">
-            Front End Website Developer
+          <h1 className="hidden-element delay-200 fw-bolder display-1 mb-2">
+            Front End Developer <br /> Nice to meet ya!
           </h1>
-          <p className="hidden-element delay-400 fs-5 text-muted">
+          <p className="hidden-element delay-400 fs-3 text-muted">
             I'm Tran Trong Hien, Front-end Developer base on Can Tho, Viet Nam.
             As a Front-end Developer, i am dedicated to turning ideas an design
             into web applications.
@@ -20,22 +19,22 @@ const HeroSection = () => {
           <div className="hidden-element delay-1000 d-flex justify-content-start align-items-end  gap-3 ">
             <a
               href={"#projects"}
-              className="fw-bolder text-decoration-none text-dark fs-5 hover-link"
+              className="fw-bolder text-decoration-none text-dark fs-4 hover-link"
             >
               View Projects
             </a>
-            <span className="fs-6" style={{ color: "#9e9e9e" }}>
+            <span className="fs-5" style={{ color: "#9e9e9e" }}>
               or
             </span>
             <a
               href={"#about"}
-              className="fw-bolder text-decoration-none text-dark fs-5 hover-link"
+              className="fw-bolder text-decoration-none text-dark fs-4 hover-link"
             >
               Read About Me
             </a>
           </div>
         </div>
-        <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+        {/* <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12">
           <img
             src={heroBaner}
             className="image-fluid hidden-element delay-1000"
@@ -43,7 +42,7 @@ const HeroSection = () => {
             height={"100%"}
             alt=""
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

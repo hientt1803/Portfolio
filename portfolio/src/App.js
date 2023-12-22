@@ -83,6 +83,7 @@ function App() {
       <Menu />
 
       <div className="container-xxl position-relative">
+
         {/* Hero section */}
         <HeroSection {...{ isVisible }} />
 
@@ -141,8 +142,10 @@ function App() {
         </div>
       </div>
 
-      {/*  */}
+      {/* Footer */}
       <FooterSection />
+
+      {/* Loading animate */}
       {isLoading && (
         <>
           {/* Loading */}

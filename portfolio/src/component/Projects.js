@@ -9,7 +9,7 @@ const ProjectSection = () => {
       path: "/project",
       background:
         "https://images.pexels.com/photos/1848731/pexels-photo-1848731.jpeg?auto=compress&cs=tinysrgb&w=640",
-      date: "11-2023",
+      date: "12-2023",
       title: "Education System Manager",
     },
     {

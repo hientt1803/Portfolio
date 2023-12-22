@@ -59,6 +59,12 @@
   transition: var(--smooth);
 }
 
+#home {
+  height: 100vh;
+  padding: auto 0;
+  margin: auto 0;
+}
+
 /* Cusstom Code */
 .hover-link {
   position: relative;
@@ -271,6 +277,20 @@
   clear: both;
   position: sticky;
   top: 0;
+}
+
+/* Hero */
+.hero-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1100px;
+}
+
+.hero-content-container {
+  max-width: 1100px;
 }
 
 /* Projects */
