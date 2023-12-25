@@ -9,16 +9,18 @@ const HeroSection = () => {
             TRAN TRONG HIEN
           </span>
           <h1 className="hidden-element delay-200 fw-bolder display-1 mb-2">
-            Front End Developer <br /> Nice to meet ya!
+            Front-end Developer <br /> Nice to meet ya!
           </h1>
           <p className="hidden-element delay-400 fs-3 text-muted">
             I'm Tran Trong Hien, Front-end Developer base on Can Tho, Viet Nam.
             As a Front-end Developer, i am dedicated to turning ideas an design
-            into web applications.
+            into web applications with JS library and framework. I'm also have
+            experience in back-end about RestFull-API application build in Java
+            (Spring boot 3,1).
           </p>
           <div className="hidden-element delay-1000 d-flex justify-content-start align-items-end  gap-3 ">
             <a
-              href={"#projects"}
+              href="#projects"
               className="fw-bolder text-decoration-none text-dark fs-4 hover-link"
             >
               View Projects
@@ -27,7 +29,7 @@ const HeroSection = () => {
               or
             </span>
             <a
-              href={"#about"}
+              href="#about"
               className="fw-bolder text-decoration-none text-dark fs-4 hover-link"
             >
               Read About Me

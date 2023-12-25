@@ -91,13 +91,7 @@ const projects = [
     secondSmallImage: eCommerceImage,
     firstLargeImage: eCommerceImage,
     secondLargeImage: eCommerceImage,
-    listImage: [
-      {
-        id: 1,
-        image:
-          "https://images.pexels.com/photos/3769139/pexels-photo-3769139.jpeg?auto=compress&cs=tinysrgb&w=400",
-      },
-    ],
+    listImage: [],
     introText:
       "At 4MEMS, we understand the importance of technology in enhancing our daily lives. Whether you're a" +
       " music enthusiast seeking high-quality audio experiences or a tech-savvy individual looking for the latest" +
@@ -233,7 +227,7 @@ const ProjectPage = () => {
             </h5>
             <h5>
               {project.technology.map((item) => (
-                <span>{item}, </span>
+                <span className="hidden-element text-start">{item}, </span>
               ))}
             </h5>
           </div>
@@ -254,7 +248,7 @@ const ProjectPage = () => {
             PROJECT OVERVIEW
           </h6>
           <h1 className="hidden-element fw-bolder display-2 mb-5 text-start delay-200">
-            Some image of project
+            Quick Travel into project
           </h1>
           <div className="col-12 my-5">
             {/* Second row image */}
@@ -298,7 +292,7 @@ const ProjectPage = () => {
             {/* <h1 className="mt-5 mb-3 text-decoration-underline fw-bold">
               More Image
             </h1> */}
-            {listImage.map((image) => (
+            {listImage?.map((image) => (
               <div className="col-12 mb-5" key={image.id}>
                 <div
                   className="hidden-element project-page-img text-decoration-none border"
@@ -310,6 +304,19 @@ const ProjectPage = () => {
                 ></div>
               </div>
             ))}
+            {listImage.length === 0 && (
+              <div className="my-5 py-5">
+                <h3 className="hidden-element fw-bolder text-center mb-2 text-start delay-200">
+                  Images'll be updated as soon as possible
+                </h3>
+                <h6
+                  className="hidden-element text-center"
+                  style={{ color: "#9e9e9e" }}
+                >
+                  Sorry for the inconvenience.
+                </h6>
+              </div>
+            )}
           </div>
 
           {/* Comeback section */}

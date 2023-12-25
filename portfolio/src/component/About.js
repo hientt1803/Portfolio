@@ -10,9 +10,10 @@ const AboutSection = () => {
           A FEW WORDS ABOUT ME
         </span>
         <p className="hidden-element fs-1 fw-bolder">
-          I'm Tran Trong Hien, a Full Stack Developer. And now i'm in college
-          with 6 months experience but i always learn new things everyday to
-          make myself better.
+          I'm Tran Trong Hien, a Full Stack Developer. I've graduate since
+          19/12/2023 in FPT Polytechnic college Can Tho and i've 6 months
+          experience with Front-end and Back-end programing but i always learn
+          new things everyday to make myself better and better.
         </p>
         <p
           className="hidden-element fs-5 my-5 fw-bold px-5 px-sm-0"
@@ -70,7 +71,7 @@ const AboutSection = () => {
               </span>
               {/* Item */}
               <span className="skill item">
-                <span className="fs-5">Redux</span>
+                <span className="fs-5">Redux (basic)</span>
                 <span className="mx-2" style={{ color: "#9e9e9e" }}>
                   /
                 </span>
@@ -166,13 +167,6 @@ const AboutSection = () => {
               {/* Item */}
               <span className="skill item">
                 <span className="fs-5">Trello</span>
-                <span className="mx-2" style={{ color: "#9e9e9e" }}>
-                  /
-                </span>
-              </span>
-              {/* Item */}
-              <span className="skill item">
-                <span className="fs-5">Docker</span>
               </span>
             </div>
           </div>
