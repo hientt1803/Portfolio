@@ -2,7 +2,6 @@ import { React, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import FooterSection from "../component/Footer";
 import Menu from "../component/Menu";
-import eCommerceImage from "../assets/image/e-commerce.jpg";
 
 // Education
 import edu4 from "../assets/image/education/1-fullscr.png";
@@ -81,16 +80,13 @@ const projects = [
       " RestFullAPI",
       "Bootstrap",
     ],
+    devlopLink: null,
   },
   {
     id: 2,
     path: "/project",
     date: "08-2023",
     title: "E-Commerce Website",
-    firstSmallImage: eCommerceImage,
-    secondSmallImage: eCommerceImage,
-    firstLargeImage: eCommerceImage,
-    secondLargeImage: eCommerceImage,
     listImage: [],
     introText:
       "At 4MEMS, we understand the importance of technology in enhancing our daily lives. Whether you're a" +
@@ -112,6 +108,19 @@ const projects = [
       " RestFullAPI",
       "Bootstrap",
     ],
+    devlopLink: null,
+  },
+  {
+    id: 2,
+    path: "/project",
+    date: "08-2023",
+    title: "E-Commerce Website",
+    listImage: [],
+    introText: "A small project using NextJS with animation by framer motion",
+    github:
+      "https://github.com/hientt1803/e-commerce-app-springboot-and-reactjs",
+    technology: ["Nextjs 14", "Framer motion", "tailwind", ""],
+    devlopLink: "https://anime-vault-ten-beige.vercel.app/",
   },
 ];
 
@@ -235,6 +244,10 @@ const ProjectPage = () => {
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
             <h5 className="hidden-element fw-bold" style={{ color: "#9e9e9e" }}>
               {project.introText}
+            </h5>
+            <h5 className="mt-5">
+              {project.devlopLink !== null &&
+                `Devploy link: ${project.devlopLink}`}
             </h5>
           </div>
         </div>
