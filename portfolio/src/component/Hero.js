@@ -7,9 +7,9 @@ import githubImage from "../assets/image/database.png";
 const HeroSection = () => {
   return (
     <section className="position-relative hero-background" id="home">
-      <div className="row justify-content-between align-items-center g-5 text-start hero-container over-flow-hidden">
-        <div className="hidden-element hero-content-container mx-auto col-12">
-          <span className="fs-4 mt-sm-5" style={{ color: "#9e9e9e" }}>
+      <div className="container-xxl row justify-content-between align-items-center g-5 w-100 text-start hero-container over-flow-hidden">
+        <div className="hidden-element hero-content-container w-100 mx-auto col-12">
+          <span className="fs-4" style={{ color: "#9e9e9e" }}>
             TRAN TRONG HIEN
           </span>
           <h1 className="hidden-element delay-200 fw-bolder display-1 mb-2">
@@ -39,9 +39,9 @@ const HeroSection = () => {
               Read About Me
             </a>
           </div>
-          <div className="d-flex flex-wrap justify-content-start align-items-center mt-5 pt-5 gap-5">
+          <div className="d-flex flex-wrap align-items-center mt-5 pt-5 gap-5">
             <span className="text-dark h4">TECH |</span>
-            <div className="d-flex justify-content-start flex-wrap gap-4">
+            <div className="d-flex flex-wrap justify-content-start ms-3 gap-4">
               <img
                 src={reactImage}
                 alt="HTML"

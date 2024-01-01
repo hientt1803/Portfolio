@@ -83,7 +83,6 @@ function App() {
       <Menu />
 
       <div className="position-relative">
-
         {/* Hero section */}
         <HeroSection {...{ isVisible }} />
 
@@ -96,49 +95,51 @@ function App() {
         {/* Contact */}
         <ContactSection />
 
-        {/* Email button*/}
-        <div
-          className="position-fixed"
-          style={{ bottom: "20px", transition: "all 0.5s ease" }}
-        >
-          <a
-            className="d-flex justify-content-center align-items-center p-3
+        <div className="container-xxl d-flex justify-content-between align-items-center">
+          {/* Email button*/}
+          <div
+            className="position-fixed"
+            style={{ bottom: "20px", transition: "all 0.5s ease" }}
+          >
+            <a
+              className="d-flex justify-content-center align-items-center p-3
             rounded-5 text-white text-decoration-none 
             email-fixed-bottom"
-            href={"mailTo:tronghientran18@gmail.com"}
-            onMouseEnter={() => {
-              setEmailActive(true);
-            }}
-            onMouseLeave={() => {
-              setEmailActive(false);
-            }}
-          >
-            {emailActive ? (
-              <>
-                <span style={{ transition: "all 0.5s ease" }}>
-                  <i className="fa-regular fa-envelope me-2" />
-                  contact me
-                </span>
-              </>
-            ) : (
-              <>
-                <i
-                  className="fa-regular fa-envelope"
-                  style={{ transition: "all 0.5s ease" }}
-                />
-              </>
-            )}
-          </a>
-        </div>
+              href={"mailTo:tronghientran18@gmail.com"}
+              onMouseEnter={() => {
+                setEmailActive(true);
+              }}
+              onMouseLeave={() => {
+                setEmailActive(false);
+              }}
+            >
+              {emailActive ? (
+                <>
+                  <span style={{ transition: "all 0.5s ease" }}>
+                    <i className="fa-regular fa-envelope me-2" />
+                    contact me
+                  </span>
+                </>
+              ) : (
+                <>
+                  <i
+                    className="fa-regular fa-envelope"
+                    style={{ transition: "all 0.5s ease" }}
+                  />
+                </>
+              )}
+            </a>
+          </div>
 
-        {/* Scroll to Top button */}
-        <div className="scrollTopButton" onClick={scrollToTop}>
-          <span
-            className="d-flex justify-content-center align-items-center p-3
+          {/* Scroll to Top button */}
+          <div className="scrollTopButton" onClick={scrollToTop}>
+            <span
+              className="d-flex justify-content-center align-items-center p-3
             rounded-5 text-white text-decoration-none"
-          >
-            <i className="fa-solid fa-arrow-up"></i>
-          </span>
+            >
+              <i className="fa-solid fa-arrow-up"></i>
+            </span>
+          </div>
         </div>
       </div>
 

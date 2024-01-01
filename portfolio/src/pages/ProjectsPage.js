@@ -97,13 +97,14 @@ const projects = [
     introText:
       "At 4MEMS, we understand the importance of technology in enhancing our daily lives. Whether you're a" +
       " music enthusiast seeking high-quality audio experiences or a tech-savvy individual looking for the latest" +
-      " gadgets, our platform offers a convenient and reliable way to explore and purchase the tech products you desire." +
-      "Our extensive catalog features a diverse selection of earpods, allowing you to enjoy your favorite music, podcasts," +
-      "and phone calls with exceptional sound quality and comfort. We carefully curate our collection to ensure that you have" +
-      " access to the most innovative and reliable brands and models in the market" +
-      "In addition to earpods, we also offer a range of speakers that deliver immersive" +
-      "audio experiences for your home, office, or on-the-go. Whether you're hosting a party, watching a movie, or simply " +
-      "enjoying your favorite tunes, our speakers will elevate your audio experience to new heights...",
+      " gadgets, our platform offers a convenient and reliable way to explore and purchase the tech products you desire.",
+    feature: [
+      "login, logout, forgot password,...",
+      "Searching, view a projects (air pods, headphone,...)",
+      "Shopping cart and check out (integration paypal)",
+      "purchase history",
+      "Admin dashboard: manager order, products, users, transaction, statistics",
+    ],
     github:
       "https://github.com/hientt1803/e-commerce-app-springboot-and-reactjs",
     technology: [
@@ -125,6 +126,7 @@ const projects = [
     listImage: [],
     introText:
       "A small project using NextJS with animation by framer motion when learning NextJS",
+    feature: ["view ranking anime from API", "Animation with framer motion"],
     github: "https://github.com/hientt1803/anime-vault",
     technology: ["Nextjs 14", "Framer motion", "tailwind", "..."],
     devlopLink: "https://anime-vault-ten-beige.vercel.app/",
@@ -136,8 +138,25 @@ const projects = [
     title: "Blog Website",
     listImage: [],
     introText: "Coming soon",
+    feature: ["Login, logout", "Animation with framer motion"],
     github: "https://github.com/hientt1803/anime-vault",
     technology: ["Nextjs 14", "NodeJS", "Prisma", "..."],
+    devlopLink: null,
+  },
+  {
+    id: 5,
+    path: "/project",
+    date: "01-2024",
+    title: "Admin Dashboard",
+    listImage: [],
+    introText: "Coming soon",
+    feature: [
+      "Login, logout",
+      "CRUD users, products",
+      "pagination, searching, statistics",
+    ],
+    github: "https://github.com/hientt1803/anime-vault",
+    technology: ["Nextjs", "NodeJS", "", "..."],
     devlopLink: null,
   },
 ];

@@ -2,7 +2,7 @@ import { React } from "react";
 
 const ContactSection = () => {
   return (
-    <section className="section" id="contact">
+    <section className="section container-xxl" id="contact">
       <p className="hidden-element text-center" style={{ color: "#9e9e9e" }}>
         NEED A WEB DEVELOPER
       </p>

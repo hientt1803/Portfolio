@@ -97,27 +97,27 @@ const Menu = () => {
       <div id="myNav" className={`overlay ${isOpen ? "open" : ""}`}>
         {/* Right side navbar  */}
         <div>
-          <div className="float-start">ABC</div>
+          {/* <div className="float-start">ABC</div> */}
           <button
             className="float-end btn closebtn d-flex align-items-center"
             onClick={closeNav}
           >
-            <span className="fs-5 mt-2">Close</span>
-            <span aria-hidden="true" className="display-3">
+            <span className="fs-2 mt-2">Close</span>
+            <span aria-hidden="true" className="display-2">
               &times;
             </span>
           </button>
         </div>
 
-        <div className="overlay-content d-flex flex-column">
+        <div className="overlay-content d-flex justify-content-center align-items-center flex-column">
           <ul>
-            <li>
-              <span className="fs-5" style={{ color: "#adadad" }}>
+            <li className="text-center">
+              <span className="fs-4" style={{ color: "#adadad" }}>
                 MENU
               </span>
             </li>
             {menuLinks.map((menu, index) => (
-              <li key={index}>
+              <li key={index} className="text-center">
                 <a
                   href={menu.href}
                   className={`menu-link navbar-hover-link ${menu.name} ${
@@ -130,50 +130,6 @@ const Menu = () => {
                 </a>
               </li>
             ))}
-            {/* <li>
-              <a
-                href="#"
-                className={`menu-link navbar-hover-link ${
-                  isOpen ? "slide-in" : ""
-                }`}
-                alt={"home"}
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                className={`menu-link navbar-hover-link ${
-                  isOpen ? "slide-in" : ""
-                }`}
-                alt={"home"}
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href={"#about"}
-                className={`menu-link navbar-hover-link ${
-                  isOpen ? "slide-in" : ""
-                }`}
-                alt={"home"}
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href={"#contact"}
-                className={`menu-link navbar-hover-link ${
-                  isOpen ? "slide-in" : ""
-                }`}
-                alt={"home"}
-              >
-                Contact
-              </a>
-            </li> */}
           </ul>
         </div>
       </div>

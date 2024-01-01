@@ -3,7 +3,7 @@ import logo from "../assets/image/logo.png";
 
 const FooterSection = () => {
   return (
-    <footer className="container" style={{ marginTop: "100px" }}>
+    <footer className="container-xxl" style={{ marginTop: "100px" }}>
       <hr style={{ color: "#9e9e9e" }} />
       <div
         className="d-flex justify-content-start 

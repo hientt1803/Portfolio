@@ -147,24 +147,33 @@
 }
 
 .overlay-content {
-  position: relative;
+  /* position: relative;
   top: 15%;
   height: 70%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 30px; */
+  height: 100vh;
 }
 
 .overlay-content ul {
   list-style: none;
+  padding: 0;
 }
 
 .overlay-content a {
   position: relative;
   padding: 8px;
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 5rem;
   color: #818181;
   transition: var(--smooth);
+}
+
+@media screen and (max-width:1460px) {
+
+  .overlay-content a {
+    font-size: 3.6rem;
+  }
 }
 
 .navbar-hover-link {
@@ -175,8 +184,8 @@
 .navbar-hover-link.Projects:hover::before {
   content: "";
   position: absolute;
-  top: -250%;
-  right: -40%;
+  top: -150%;
+  right: 0;
   bottom: 0;
   left: 0;
   background-image: url("https://images.pexels.com/photos/15118791/pexels-photo-15118791/free-photo-of-a-person-holding-a-picture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load");
@@ -184,8 +193,8 @@
   background-repeat: no-repeat;
   object-fit: cover;
   opacity: 0.25;
-  width: 700px !important;
-  height: 700px !important;
+  width: 400px !important;
+  height: 400px !important;
   z-index: -1;
   transition: var(--smooth);
 }
@@ -193,8 +202,8 @@
 .navbar-hover-link.About:hover::before {
   content: "";
   position: absolute;
-  top: -250%;
-  right: -40%;
+  top: -150%;
+  right: 0;
   bottom: 0;
   left: 0;
   background-image: url("https://images.pexels.com/photos/17216968/pexels-photo-17216968/free-photo-of-sitting-in-chair-man-admiring-idyllic-landscape.jpeg?auto=compress&cs=tinysrgb&w=400");
@@ -202,16 +211,16 @@
   background-repeat: no-repeat;
   object-fit: cover;
   opacity: 0.25;
-  width: 700px !important;
-  height: 700px !important;
+  width: 400px !important;
+  height: 400px !important;
   z-index: -1;
 }
 
 .navbar-hover-link.Contact:hover::before {
   content: "";
   position: absolute;
-  top: -250%;
-  right: -40%;
+  top: -150%;
+  right: 0;
   bottom: 0;
   left: 0;
   background-image: url("https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&w=400");
@@ -219,8 +228,8 @@
   background-repeat: no-repeat;
   object-fit: cover;
   opacity: 0.25;
-  width: 700px !important;
-  height: 700px !important;
+  width: 400px !important;
+  height: 400px !important;
   z-index: -1;
 }
 
@@ -311,6 +320,34 @@
   max-width: 1100px;
 }
 
+@media screen and (max-width:654px) {
+  .hero-content-container {
+    margin-top: 350px;
+    padding: 0 80px !important;
+  }
+
+  #home {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .hero-content-container {
+    margin-top: 200px;
+    padding: 0 50px !important;
+  }
+
+  #home {
+    height: 130vh;
+  }
+}
+
+@media screen and (max-width:1100px) {
+  .hero-content-container {
+    padding: 0 100px;
+  }
+}
+
 /* Projects */
 .projects {
   display: flex;
@@ -396,9 +433,33 @@
 .scrollTopButton {
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: calc(10% + 7vw);
   border-radius: 50%;
   transition: var(--smooth);
+}
+
+@media screen and (max-width:1768px) {
+  .scrollTopButton {
+    right: calc(10% + 2%);
+  }
+}
+
+@media screen and (max-width:1615px) {
+  .scrollTopButton {
+    right: 10%;
+  }
+}
+
+@media screen and (max-width:1500px) {
+  .scrollTopButton {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width:1300px) {
+  .scrollTopButton {
+    right: 2%;
+  }
 }
 
 .scrollTopButton span {
@@ -495,8 +556,8 @@
   }
 
   to {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     opacity: 0;
   }
 }

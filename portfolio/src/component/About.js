@@ -3,7 +3,7 @@ import image from "../assets/image/authorImage.jpg";
 
 const AboutSection = () => {
   return (
-    <section className="section" id="about">
+    <section className="section container-xxl" id="about">
       {/* About My Self */}
       <div className="about-introduce">
         <span className="hidden-element fs-6" style={{ color: "#9e9e9e" }}>
