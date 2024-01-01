@@ -50,46 +50,45 @@ const Menu = () => {
 
   return (
     <>
-      <header
-        style={{ zIndex: "999" }}
-        className="sticky-header container-xxl bg-white d-flex justify-content-between align-items-center"
-      >
-        <Link
-          to={"/"}
-          className="d-flex justify-content-start gap-2 navbar-brand"
-        >
-          <Link to={"/"}>
-            <img
-              src={logo}
-              alt="Logo"
-              style={{ width: "47px", height: "47px" }}
-              className="img-fluid"
-            />
+      <header style={{ zIndex: "999" }} className="sticky-header bg-white">
+        <div className="container-xxl d-flex justify-content-between align-items-center">
+          <Link
+            to={"/"}
+            className="d-flex justify-content-start gap-2 navbar-brand"
+          >
+            <Link to={"/"}>
+              <img
+                src={logo}
+                alt="Logo"
+                style={{ width: "47px", height: "47px" }}
+                className="img-fluid"
+              />
+            </Link>
+            <div className="d-flex flex-column d-none d-md-flex justify-content-center align-items-start fw-bolder">
+              <span className="fw-bolder">Tran Trong Hien</span>
+              <span className="fw-bold text-muted">WEB & UI DESIGNER</span>
+            </div>
           </Link>
-          <div className="d-flex flex-column d-none d-md-flex justify-content-center align-items-start fw-bolder">
-            <span className="fw-bolder">Tran Trong Hien</span>
-            <span className="fw-bold text-muted">WEB & UI DESIGNER</span>
-          </div>
-        </Link>
 
-        {/* Right side navbar */}
-        <div className="right-side-nav d-flex align-items-center gap-5">
-          <a
-            href={"/files/Tran-Trong-Hien-CV.pdf"}
-            type="button"
-            className="btn btn-dark fw-semibold my-3"
-          >
-            My Resume
-          </a>
-          <div
-            className="d-flex justify-content-center fw-bold"
-            onClick={openNav}
-            style={{ cursor: "pointer" }}
-          >
-            <span style={{ marginTop: "17px" }}>MENU</span>
-            <button className="btn" style={{ fontSize: "30px" }}>
-              &#9776;
-            </button>
+          {/* Right side navbar */}
+          <div className="right-side-nav d-flex align-items-center gap-5">
+            <a
+              href={"/files/Tran-Trong-Hien-CV.pdf"}
+              type="button"
+              className="btn btn-dark fw-semibold my-3"
+            >
+              My Resume
+            </a>
+            <div
+              className="d-flex justify-content-center fw-bold"
+              onClick={openNav}
+              style={{ cursor: "pointer" }}
+            >
+              <span style={{ marginTop: "17px" }}>MENU</span>
+              <button className="btn" style={{ fontSize: "30px" }}>
+                &#9776;
+              </button>
+            </div>
           </div>
         </div>
       </header>

@@ -82,7 +82,7 @@ function App() {
       {/* Menu */}
       <Menu />
 
-      <div className="container-xxl position-relative">
+      <div className="position-relative">
 
         {/* Hero section */}
         <HeroSection {...{ isVisible }} />

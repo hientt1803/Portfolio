@@ -248,6 +248,24 @@
   color: #999999;
 }
 
+/* .overlay-navbar {
+  overflow: hidden;
+  position: relative;
+  position: relative;
+  z-index: 0;
+}
+
+.overlay-navbar:before {
+  content: '';
+  filter: blur(20px);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+} */
+
 .overlay a:hover,
 .overlay a:focus {
   color: #f1f1f1;
@@ -295,19 +313,23 @@
 
 /* Projects */
 .projects {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr)); */
   transition: var(--smooth);
 }
 
 .project-item {
   position: relative;
-  height: 600px;
+  min-height: 600px;
+  min-width: 300px;
+  width: max-content;
+  height: auto;
   background-position: center center;
   background-size: cover;
   object-fit: contain;
-  /* object-position: center; */
+  object-position: center;
   cursor: pointer;
   text-align: left;
   /* filter: gray;
@@ -519,4 +541,70 @@
   background-size: cover;
   object-fit: cover;
   object-position: center;
+}
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Main styles */
+.hero-background {
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 }

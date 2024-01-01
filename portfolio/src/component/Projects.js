@@ -19,10 +19,26 @@ const ProjectSection = () => {
       date: "08-2023",
       title: "E-Commerce Website",
     },
+    {
+      id: 3,
+      path: "/project",
+      background:
+        "https://images.pexels.com/photos/5962944/pexels-photo-5962944.jpeg?auto=compress&cs=tinysrgb&w=600",
+      date: "12-2023",
+      title: "Framer motion - NextJS",
+    },
+    {
+      id: 4,
+      path: "/project",
+      background:
+        "https://images.pexels.com/photos/3098619/pexels-photo-3098619.jpeg?auto=compress&cs=tinysrgb&w=600",
+      date: "12-2023",
+      title: "Blog App",
+    },
   ];
 
   return (
-    <section className="section" id="projects">
+    <section className="container section" id="projects">
       <h6 className="hidden-element text-start" style={{ color: "#9e9e9e" }}>
         WEB DEVELOPMENT
       </h6>

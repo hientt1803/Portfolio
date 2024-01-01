@@ -19,7 +19,7 @@ const projects = [
   {
     id: 1,
     path: "/project",
-    date: "11-2023",
+    date: "09-2023 - 12-2023",
     title: "EDUCATION SYSTEM MANAGER",
     listImage: [
       {
@@ -65,27 +65,33 @@ const projects = [
     ],
     introText:
       "Introducing F4 Education System Manager - Your Ultimate Solution for Programming Center Management" +
-      "Welcome to F4 Education System Manager, the cutting-edge platform designed to revolutionize the way" +
-      "programming centers operate and thrive. Our website serves as a comprehensive solution for both selling and" +
-      "efficiently managing programming education programs. Whether you are an educational institution, coding bootcamp, " +
-      "or an individual instructor, F4 Education System Manager is tailored to meet your unique needs and elevate the entire learning experience." +
-      "Efficient Program Management: From scheduling classes to tracking student progress, our system offers a robust set of tools to streamline the " +
-      "day-to-day operations of your programming center. Manage course materials, assignments, and assessments with ease, allowing you to focus more on delivering quality education...",
+      "Welcome to F4 Education System Manager, the cutting-edge platform designed to revolutionize the way management your center",
+    feature: [
+      "login, log-out, forgot-password,.. ",
+      "cart, checkout (PayPal, VNPay)",
+      "Client (Client can view, searching courses, best course, newest course and course have good comment)",
+      "Student dashboard (Student can access to schedule, class Result, certificate, checkout history, attendance history,..) ",
+      "Teacher dashboard (Teachers can take attendance of students, grade students, give task, set assignment,...)",
+      "Admin dashboard (Admin can manager subject, course, schedule, questions, examination,...)",
+    ],
     github: "https://github.com/alexnguyen03/f4education",
     technology: [
       "React",
       "Mantine",
       "Figma",
       "Spring boot",
-      " RestFullAPI",
+      "RestFullAPI",
+      "SQL Server",
+      "POSTMAN",
       "Bootstrap",
+      "...",
     ],
     devlopLink: null,
   },
   {
     id: 2,
     path: "/project",
-    date: "08-2023",
+    date: "06-2023 - 08-2023",
     title: "E-Commerce Website",
     listImage: [],
     introText:
@@ -107,20 +113,32 @@ const projects = [
       "Spring boot",
       " RestFullAPI",
       "Bootstrap",
+      "...",
     ],
     devlopLink: null,
   },
   {
-    id: 2,
+    id: 3,
     path: "/project",
     date: "08-2023",
-    title: "E-Commerce Website",
+    title: "Ranking anime website",
     listImage: [],
-    introText: "A small project using NextJS with animation by framer motion",
-    github:
-      "https://github.com/hientt1803/e-commerce-app-springboot-and-reactjs",
-    technology: ["Nextjs 14", "Framer motion", "tailwind", ""],
+    introText:
+      "A small project using NextJS with animation by framer motion when learning NextJS",
+    github: "https://github.com/hientt1803/anime-vault",
+    technology: ["Nextjs 14", "Framer motion", "tailwind", "..."],
     devlopLink: "https://anime-vault-ten-beige.vercel.app/",
+  },
+  {
+    id: 4,
+    path: "/project",
+    date: "12-2023",
+    title: "Blog Website",
+    listImage: [],
+    introText: "Coming soon",
+    github: "https://github.com/hientt1803/anime-vault",
+    technology: ["Nextjs 14", "NodeJS", "Prisma", "..."],
+    devlopLink: null,
   },
 ];
 
@@ -222,7 +240,7 @@ const ProjectPage = () => {
             </h5>
             <h5 className="hidden-element text-start fw-bold mb-5">
               <a
-                href="https://github.com/alexnguyen03/f4education"
+                href={project.github}
                 className="hidden-element text-dark text-start fw-bold"
               >
                 {project.github}
@@ -243,12 +261,33 @@ const ProjectPage = () => {
           {/* Item */}
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
             <h5 className="hidden-element fw-bold" style={{ color: "#9e9e9e" }}>
+              DESCRIPTION
+            </h5>
+            <h4 className="hidden-element fw-bold text-dark">
               {project.introText}
-            </h5>
-            <h5 className="mt-5">
-              {project.devlopLink !== null &&
-                `Devploy link: ${project.devlopLink}`}
-            </h5>
+            </h4>
+            <h4
+              className="hidden-element fw-bold mt-5"
+              style={{ color: "#9e9e9e" }}
+            >
+              Main feature of project
+            </h4>
+            <ul>
+              {project?.feature?.map((item) => (
+                <li className="hidden-element text-dark" key={item}>
+                  <h5>{item}</h5>
+                </li>
+              ))}
+            </ul>
+
+            {project.devlopLink !== null && (
+              <h5 className="mt-5">
+                Devploy link:{" "}
+                <a href={project.devlopLink} style={{ color: "#000" }}>
+                  {project.devlopLink}
+                </a>
+              </h5>
+            )}
           </div>
         </div>
 
@@ -261,60 +300,26 @@ const ProjectPage = () => {
             PROJECT OVERVIEW
           </h6>
           <h1 className="hidden-element fw-bolder display-2 mb-5 text-start delay-200">
-            Quick Travel into project
+            Take a tour around the project
           </h1>
           <div className="col-12 my-5">
-            {/* Second row image */}
-            {/* <div className="row">
-              <div className="col-lg-4 col-xl-4 col-md-4 col-sm-12">
-                <div
-                  className="hidden-element project-page-img text-decoration-none border-3"
-                  style={{
-                    background: `url(${project.firstSmallImage})`,
-                    backgroundSize: "100%",
-                    objectFit: "contain",
-                  }}
-                >
-                  <div className="item-content m-5 pt-5 d-flex flex-column ">
-                    <span className="fs-4" style={{ color: "#9e9e9e" }}>
-                      Client
-                    </span>
-                    <strong className="fs-1">Shop Page</strong>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-8 col-xl-8 col-md-8 col-sm-12">
-                <div
-                  className="hidden-element project-page-img text-decoration-none border-3"
-                  style={{
-                    background: `url(${project.firstLargeImage})`,backgroundSize: "100%",
-                    objectFit: "contain",
-                  }}
-                >
-                  <div className="item-content m-5 pt-5 d-flex flex-column ">
-                    <span className="fs-4" style={{ color: "#9e9e9e" }}>
-                      Client
-                    </span>
-                    <strong className="fs-1">Home</strong>
-                  </div>
-                </div>
-              </div> */}
-            {/* </div> */}
-
             {/* Third row image */}
-            {/* <h1 className="mt-5 mb-3 text-decoration-underline fw-bold">
-              More Image
-            </h1> */}
-            {listImage?.map((image) => (
-              <div className="col-12 mb-5" key={image.id}>
-                <div
+            {listImage?.map((image, index) => (
+              <div className="col-12 mb-5" key={index}>
+                {/* <div
                   className="hidden-element project-page-img text-decoration-none border"
                   style={{
                     background: `url(${image.image}) no-repeat`,
                     backgroundSize: "100%",
                     objectFit: "contain",
                   }}
-                ></div>
+                ></div> */}
+                <img
+                  src={`${image.image}`}
+                  alt="index"
+                  loading="lazy"
+                  className="w-100 h-100 mb-5 object-cover border shadow"
+                />
               </div>
             ))}
             {listImage.length === 0 && (
@@ -322,12 +327,12 @@ const ProjectPage = () => {
                 <h3 className="hidden-element fw-bolder text-center mb-2 text-start delay-200">
                   Images'll be updated as soon as possible
                 </h3>
-                <h6
+                <h4
                   className="hidden-element text-center"
                   style={{ color: "#9e9e9e" }}
                 >
                   Sorry for the inconvenience.
-                </h6>
+                </h4>
               </div>
             )}
           </div>
