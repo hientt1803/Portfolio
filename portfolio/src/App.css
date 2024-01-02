@@ -95,6 +95,54 @@
   color: #282c34;
 }
 
+/* .custom-btn {
+  color: #fff;
+  background-color: #212121;
+  padding: 15px 20px;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  overflow: hidden;
+  transition: var(--smooth);
+}
+
+.custom-btn:hover {
+  background-color: #fff;
+  color: #212121;
+}
+
+.custom-btn .custom-btn-text {
+  display: inline-block;
+  transition: var(--smooth);
+}
+
+.custom-btn:hover .custom-btn-text {
+  transform: translateY(-200%);
+}
+
+.custom-btn:hover .custom-btn-text::after {
+  content: 'My Resume';
+  color: #212121;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  animation: buttonAnimate 200ms ease-in;
+}
+
+@keyframes buttonAnimate {
+  from {
+    opacity: 0;
+    transform: translateY(300%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(200%);
+  }
+} */
+
 /* .card {
   transition: var(--smooth);
 }
@@ -342,6 +390,17 @@
   }
 }
 
+@media screen and (max-width:400px) {
+  .hero-content-container {
+    margin-top: 150px;
+    padding: 0 20px !important;
+  }
+
+  #home {
+    height: 160vh;
+  }
+}
+
 @media screen and (max-width:1100px) {
   .hero-content-container {
     padding: 0 100px;
@@ -374,6 +433,13 @@
   /* filter: brightness(75%) contrast(110%) saturate(25%) brightness(150%); */
   transition: var(--smooth);
 }
+
+@media screen and (max-width:654px) {
+  .project-item {
+    width: 100%;
+  }
+}
+
 
 .item-content {
   opacity: 1;

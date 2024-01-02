@@ -6,8 +6,8 @@ const Loading = () => {
   return (
     <>
       <div className="loading loading-fade-out">
-        <div className="w-100 h-100">
-          <div className="w-100 h-100 container-xxl p-5 loading-content position-relative">
+        <div className="container-xxl w-100 h-100">
+          <div className="w-100 h-100 p-5 loading-content position-relative">
             <div className="infinity-water"></div>
             <img
               src={loadingImage}

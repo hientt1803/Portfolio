@@ -45,8 +45,18 @@ const HeroSection = () => {
               <img
                 src={reactImage}
                 alt="HTML"
-                width={40}
-                height={40}
+                width={55}
+                height={55}
+                className="rouded"
+                loading="lazy"
+              />
+              <img
+                src={
+                  "https://th.bing.com/th/id/OIP.QkI9rLXxb4fBMHKwZ0JYqgAAAA?w=171&h=180&c=7&r=0&o=5&pid=1.7"
+                }
+                alt="HTML"
+                width={55}
+                height={55}
                 className="rouded"
                 loading="lazy"
               />
@@ -55,8 +65,8 @@ const HeroSection = () => {
                   "https://th.bing.com/th/id/OIP.Yzjjsf7_-1FEPmE-3SprGQHaIH?rs=1&pid=ImgDetMain"
                 }
                 alt="HTML"
-                width={40}
-                height={40}
+                width={55}
+                height={55}
                 className="rouded"
                 loading="lazy"
               />
@@ -65,32 +75,42 @@ const HeroSection = () => {
                   "https://th.bing.com/th/id/R.2441cb996a3afd2ae91cf88fe008a623?rik=Y4dvtTYDsow8Lw&pid=ImgRaw&r=0"
                 }
                 alt="HTML"
-                width={40}
-                height={40}
+                width={55}
+                height={55}
                 className="rouded"
                 loading="lazy"
               />
               <img
                 src={javaImage}
                 alt="HTML"
-                width={40}
-                height={40}
+                width={55}
+                height={55}
+                className="rouded"
+                loading="lazy"
+              />
+              <img
+                src={
+                  "https://th.bing.com/th/id/R.c2616037e9cb50149efcd7687aa6162a?rik=dJA7GDciZLIb4Q&riu=http%3a%2f%2fwww.jonclawson.com%2fsites%2fjonclawson.com%2ffiles%2fimagecache%2fpreview%2fspring-icon.png&ehk=7nvyPIwlQssNVAA15EAquDylPDXOwMrJS8yagVUT%2bbU%3d&risl=&pid=ImgRaw&r=0"
+                }
+                alt="HTML"
+                width={55}
+                height={55}
                 className="rouded"
                 loading="lazy"
               />
               <img
                 src={databaseImage}
                 alt="HTML"
-                width={40}
-                height={40}
+                width={55}
+                height={55}
                 className="rouded"
                 loading="lazy"
               />
               <img
                 src={githubImage}
                 alt="HTML"
-                width={40}
-                height={40}
+                width={55}
+                height={55}
                 className="rouded"
                 loading="lazy"
               />
