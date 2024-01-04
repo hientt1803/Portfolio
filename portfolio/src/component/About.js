@@ -81,7 +81,7 @@ const AboutSection = () => {
                 </span>
                 {/* Item */}
                 <span className="skill item">
-                  <span className="fs-5">Redux (basic)</span>
+                  <span className="fs-5">Redux</span>
                   <span className="mx-2" style={{ color: "#9e9e9e" }}>
                     /
                   </span>
@@ -120,21 +120,21 @@ const AboutSection = () => {
               >
                 {/* Item */}
                 <span className="skill item">
-                  <span className="fs-5">Java, SpringBoot</span>
+                  <span className="fs-5">Java, SpringBoot, Java Swing</span>
                   <span className="mx-2" style={{ color: "#9e9e9e" }}>
                     /
                   </span>
                 </span>
                 {/* Item */}
                 <span className="skill item">
-                  <span className="fs-5">Restfull Api</span>
+                  <span className="fs-5">RESTfull APIs</span>
                   <span className="mx-2" style={{ color: "#9e9e9e" }}>
                     /
                   </span>
                 </span>
                 {/* Item */}
                 <span className="skill item">
-                  <span className="fs-5">FireBase, Postman</span>
+                  <span className="fs-5">Postman</span>
                   <span className="mx-2" style={{ color: "#9e9e9e" }}>
                     /
                   </span>
@@ -146,7 +146,7 @@ const AboutSection = () => {
                   </span>
                 </span>
                 <span className="skill item">
-                  <span className="fs-5">SQL Server, MySQL</span>
+                  <span className="fs-5">SQL Server, MySQL, MongoDB</span>
                 </span>
               </div>
             </div>

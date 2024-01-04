@@ -154,11 +154,18 @@ const projects = [
     date: "12-2023",
     title: "Blog Website",
     listImage: [],
-    introText: "Coming soon",
-    feature: ["Login, logout", "Animation with framer motion"],
-    github: "https://github.com/hientt1803/anime-vault",
-    technology: ["Nextjs 14", "NodeJS", "Prisma", "..."],
-    devlopLink: null,
+    introText:
+      "A blog app where people can share there stories and give a word to help people in a positive situation. " +
+      "Project area comming up, waiting for deploy !!!",
+    feature: [
+      "Login with google, github, logout",
+      "Create a post tell there stories",
+      "Comment",
+      "Pagination,...",
+    ],
+    github: "https://github.com/hientt1803/augentern-blog-app",
+    technology: ["Nextjs 14", "NodeJS", "Prisma", "auth.js", "..."],
+    devlopLink: "Coming up, waiting for deploy",
   },
   {
     id: 5,
@@ -180,15 +187,15 @@ const projects = [
       },
     ],
     introText:
-      "A small project i'm building when learing Next.js, Nodejs and MongoDB",
+      "A small project i'm building when learing Next.js, Nodejs and MongoDB, Project are comming up, waiting for deploy",
     feature: [
       "Login, logout",
       "CRUD users, products",
       "pagination, searching, statistics",
     ],
-    github: "https://github.com/hientt1803/anime-vault",
+    github: "https://github.com/hientt1803/admin-dashboard-next-14",
     technology: ["Next.js", "Auth.js", "NodeJS", "MongoDB", "..."],
-    devlopLink: null,
+    devlopLink: "Coming up, waiting for deploy",
   },
   {
     id: 6,

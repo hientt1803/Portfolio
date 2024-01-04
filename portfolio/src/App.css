@@ -433,7 +433,7 @@
   width: max-content;
   height: auto;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   cursor: pointer;
   text-align: left;

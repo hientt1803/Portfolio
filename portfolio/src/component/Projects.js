@@ -23,7 +23,7 @@ const ProjectSection = () => {
       id: 3,
       path: "/project",
       background:
-        "https://images.pexels.com/photos/11297769/pexels-photo-11297769.jpeg?auto=compress&cs=tinysrgb&w=900",
+        "https://images.pexels.com/photos/11297769/pexels-photo-11297769.jpeg?auto=compress&cs=tinysrgb&w=900&h=600",
       date: "12-2023",
       title: "Java Swing - Phone System Management",
     },
@@ -69,7 +69,10 @@ const ProjectSection = () => {
               key={project.id}
               to={{ pathname: `project/${project.id}` }}
               className="hidden-element project-item text-decoration-none"
-              style={{ background: `url(${project.background}) no-repeat` }}
+              style={{
+                background: `url(${project.background}) no-repeat`,
+                backgroundSize: "cover",
+              }}
             >
               <div className="item-content m-5 d-flex flex-column ">
                 <span className="fs-4" style={{ color: "#9e9e9e" }}>
