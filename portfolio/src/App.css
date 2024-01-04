@@ -10,6 +10,16 @@
   scroll-behavior: smooth;
 }
 
+.light {
+  color: #212121;
+  background-color: #fff;
+}
+
+.dark {
+  color: #fff;
+  background-color: #212121;
+}
+
 .App {
   text-align: center;
   scroll-behavior: smooth;
@@ -422,15 +432,14 @@
   min-width: 300px;
   width: max-content;
   height: auto;
-  background-position: center center;
-  background-size: cover;
-  object-fit: contain;
-  object-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   cursor: pointer;
   text-align: left;
   /* filter: gray;
-  -webkit-filter: grayscale(0.65); */
-  /* filter: brightness(75%) contrast(110%) saturate(25%) brightness(150%); */
+  -webkit-filter: grayscale(0.65);
+  filter: brightness(75%) contrast(110%) saturate(25%) brightness(130%); */
   transition: var(--smooth);
 }
 
@@ -631,7 +640,7 @@
 .loading-fade-out {
   animation-name: fade-out;
   animation-duration: 0.6s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   transition: var(--smooth);
 }
 

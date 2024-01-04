@@ -8,9 +8,9 @@ const ProjectSection = () => {
       id: 1,
       path: "/project",
       background:
-        "https://images.pexels.com/photos/1848731/pexels-photo-1848731.jpeg?auto=compress&cs=tinysrgb&w=640",
+        "https://images.pexels.com/photos/1848731/pexels-photo-1848731.jpeg?auto=compress&cs=tinysrgb&w=700",
       date: "12-2023",
-      title: "Education System Manager",
+      title: "Education System Management",
     },
     {
       id: 2,
@@ -23,9 +23,9 @@ const ProjectSection = () => {
       id: 3,
       path: "/project",
       background:
-        "https://images.pexels.com/photos/5962944/pexels-photo-5962944.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/11297769/pexels-photo-11297769.jpeg?auto=compress&cs=tinysrgb&w=900",
       date: "12-2023",
-      title: "Framer motion - NextJS",
+      title: "Java Swing - Phone System Management",
     },
     {
       id: 4,
@@ -42,6 +42,14 @@ const ProjectSection = () => {
         "https://images.pexels.com/photos/259006/pexels-photo-259006.jpeg?auto=compress&cs=tinysrgb&w=600",
       date: "01-2024",
       title: "Admin Dashboard",
+    },
+    {
+      id: 6,
+      path: "/project",
+      background:
+        "https://images.pexels.com/photos/5962944/pexels-photo-5962944.jpeg?auto=compress&cs=tinysrgb&w=600",
+      date: "12-2023",
+      title: "Framer motion - NextJS",
     },
   ];
 

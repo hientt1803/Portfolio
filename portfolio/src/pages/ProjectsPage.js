@@ -15,6 +15,11 @@ import edu11 from "../assets/image/education/9-full.png";
 import edu12 from "../assets/image/education/classResult.png";
 import edu13 from "../assets/image/education/teacher-class_result.png";
 
+// Dashboard
+import ds1 from "../assets/image/dashboard/Screenshot 2024-01-03 092842.png";
+import ds2 from "../assets/image/dashboard/Screenshot 2024-01-03 093001.png";
+import ds3 from "../assets/image/dashboard/Screenshot 2024-01-03 093035.png";
+
 const projects = [
   {
     id: 1,
@@ -122,14 +127,26 @@ const projects = [
     id: 3,
     path: "/project",
     date: "08-2023",
-    title: "Ranking anime website",
+    title: "Phone System Management",
     listImage: [],
     introText:
-      "A small project using NextJS with animation by framer motion when learning NextJS",
-    feature: ["view ranking anime from API", "Animation with framer motion"],
-    github: "https://github.com/hientt1803/anime-vault",
-    technology: ["Nextjs 14", "Framer motion", "tailwind", "..."],
-    devlopLink: "https://anime-vault-ten-beige.vercel.app/",
+      "A project build in java swing, JDBC and SQL Server. The purpose of this project is" +
+      "building a system managerment for a small and large store which there sell they phone, laptop,..",
+    feature: [
+      "Login, Logout, forgot-password",
+      "manager a products, users, discount, attendance, ...",
+      "sell: order,checkout,statistics, ...",
+    ],
+    github: "https://github.com/alexnguyen03/PhoneSystem",
+    technology: [
+      "Java swing",
+      "JDBC",
+      "SQL Server",
+      "Flatlaf",
+      "Kcontrols-master",
+      "...",
+    ],
+    devlopLink: null,
   },
   {
     id: 4,
@@ -148,16 +165,43 @@ const projects = [
     path: "/project",
     date: "01-2024",
     title: "Admin Dashboard",
-    listImage: [],
-    introText: "Coming soon",
+    listImage: [
+      {
+        id: 1,
+        image: ds1,
+      },
+      {
+        id: 2,
+        image: ds2,
+      },
+      {
+        id: 3,
+        image: ds3,
+      },
+    ],
+    introText:
+      "A small project i'm building when learing Next.js, Nodejs and MongoDB",
     feature: [
       "Login, logout",
       "CRUD users, products",
       "pagination, searching, statistics",
     ],
     github: "https://github.com/hientt1803/anime-vault",
-    technology: ["Nextjs", "NodeJS", "", "..."],
+    technology: ["Next.js", "Auth.js", "NodeJS", "MongoDB", "..."],
     devlopLink: null,
+  },
+  {
+    id: 6,
+    path: "/project",
+    date: "08-2023",
+    title: "Ranking anime website",
+    listImage: [],
+    introText:
+      "A small project using NextJS with animation by framer motion when learning NextJS",
+    feature: ["view ranking anime from API", "Animation with framer motion"],
+    github: "https://github.com/hientt1803/anime-vault",
+    technology: ["Nextjs 14", "Framer motion", "tailwind", "..."],
+    devlopLink: "https://anime-vault-ten-beige.vercel.app/",
   },
 ];
 
@@ -168,7 +212,6 @@ const ProjectPage = () => {
 
   // Show on scroll
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [listImage, setListImage] = useState(project.listImage);
 
   useEffect(() => {
@@ -188,14 +231,6 @@ const ProjectPage = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // IsLoading
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 2400);
-    return () => clearTimeout(timeout);
-  }, [isLoading]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {

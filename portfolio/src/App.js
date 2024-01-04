@@ -53,7 +53,7 @@ function App() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2400);
+    }, 3400);
     return () => clearTimeout(timeout);
   }, [isLoading]);
 
@@ -95,6 +95,7 @@ function App() {
         {/* Contact */}
         <ContactSection />
 
+        {/* Email and scroll button */}
         <div className="container-xxl d-flex justify-content-between align-items-center">
           {/* Email button*/}
           <div
